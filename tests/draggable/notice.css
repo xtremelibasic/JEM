@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+}
+body{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.noticeboard-container{
+    width:500px;
+    height:500px;
+    background-color:#46E4C1;
+}
+.notice{
+    width:100px;
+    height:100px;
+    background-color:#ffffff;
+}

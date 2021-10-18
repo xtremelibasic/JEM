@@ -1,0 +1,47 @@
+.calendar-container{
+    width:850px;
+    height:auto;
+    position:relative;
+    overflow:hidden;
+    top:20px;
+    left:120px;
+  
+}
+.calendar{
+    display:flex;
+    padding-left:50px;
+    position:relative;
+    top:0px;
+    right:-25px;
+}
+.month{
+    margin-right:1rem;
+}
+.month-details{
+    width:300px;
+    height:auto;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.day{
+    width:40px;
+    height:40px;
+    border:none;
+    text-align:center;
+}
+
+.backChevron{
+position:absolute;
+    top:570px;
+    right:1100px;
+}
+.forwardChevron{
+    position:absolute;
+    top:570px;
+    right:125px;
+}
+.today{
+    background-color: #46E4C1;
+    border-radius:5px;
+}

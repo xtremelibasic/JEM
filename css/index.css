@@ -1,0 +1,243 @@
+/*General*/
+p{
+    font-family: sans-serif;
+    font-size:1.2rem;
+    line-height:1.8rem;
+}
+
+/*Homepage*/
+.homepage{
+    width:80%;
+    height:80vh;
+    margin:0 auto 0 auto;
+    padding:1rem;
+    position:absolute;
+    top:0;
+    right:8.5%;
+    box-shadow: 3px 17px 40px rgb(169, 23, 148, 0.2);
+    z-index:-1;
+}
+.intro{
+    width:40vw;
+    position:relative;
+    top:20%;
+    left:35%;
+}
+.homepage h1{
+    font-size:2.5rem;
+    color:#A91794;
+}
+.homepage p{
+    width:100%;
+}
+.important-prompt{
+    width:400px !important;
+    background-color:#A91794;
+    color:#ffffff;
+    font-weight:bold;
+    padding:1rem;
+    box-shadow: 3px 17px 40px rgb(255, 246, 79,0.6);
+    position:relative;
+    top:40%;
+    left:520px;
+    pointer-events:none;
+}
+
+/*Call to action*/
+.call-to-action{
+    width:100vw;
+    height:auto;
+    background-color: #A91794;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:#ffffff;
+    padding:9rem 2rem 4rem 2rem;
+    position:relative;
+    top:95px;
+    left:-125px;
+    z-index:-5;
+}
+.call-to-action p{
+    width:50%;
+    text-align:center;
+}
+.call-to-action-btn{
+    background-color:#ffffff;
+    color:#000000;
+}
+.call-to-action-btn:hover{
+    background-color:#000000;
+    color:#ffffff;
+}
+
+/*Notification Board: News Section*/
+.news-container{
+    width:98%;
+    height:auto;
+    margin:0 auto 0 auto;
+    box-shadow: 3px 17px 40px rgb(169, 23, 148, 0.2);
+    padding:120px 1rem 4rem 1rem;
+}
+.news{
+    width:200px;
+    height:auto;
+    text-align:center;
+}
+.news h1{
+    font-size:1rem;
+}
+.news p{
+    font-size:.8rem;
+    line-height:1rem;
+
+}
+.read-more-btn{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+.news-carousel{
+    display:flex;
+    justify-content: center;
+    gap:3rem;
+}
+.backChevron{
+    position:absolute;
+    top:180%;
+    left:15%;
+}
+.forwardChevron{
+    position:absolute;
+    top:180%;
+    right:15%;
+}
+.previousChevron{
+    display:none;
+    position:absolute;
+    top:161%;
+    left:50%
+}
+.nextChevron{
+    display:none;
+    position:absolute;
+    top:270%;
+    left:50%;
+}
+/*FAQ Section*/
+.faq-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:6rem auto;
+}
+.faq{
+    width:80vw;
+    height:auto;
+}
+.faq-container h2{
+    font-size:2.5rem;
+}
+.question-answer-container{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+.question{
+    width:90%;
+    height:auto;
+    padding:0 1rem;
+    background-color:#A91794;
+    color:#ffffff;
+    display:flex;
+    font-weight:bold;
+    justify-content: space-between;
+    align-items:center;
+    margin:.2rem auto;
+}
+.answer{
+    width:90%;
+    height:auto;
+    padding:1rem 0;
+    display:none;
+   /* clip-path: inset(0 0 100% 0); */
+}
+.answer p,.question p{
+    font-size:1rem;
+}
+
+
+
+
+/*Media Queries*/
+@media screen and (max-width:1100px){
+    /*General*/
+    body{
+        padding:0px;
+    }
+    /*Homepage*/
+    .homepage{
+        width:100vw;
+        height:auto;
+        padding:5rem 0;
+        top:0;
+        right:0;
+    }
+    .intro{
+        left:55%;
+    }
+    .important-prompt{
+        width:100px;
+        top:20px;
+        left:7.5%;
+    }
+
+    /*Call-to-action*/
+    .call-to-action{
+        width:100vw;
+
+        top:0;
+        left:10px;
+        margin-top:2rem;
+    }
+    /* FAQ Section*/
+    .question{
+        width:90%;
+        margin:.3rem auto;
+    }
+}
+@media screen and (max-width:800px){
+    /*General*/
+    p{
+        font-size:1rem;
+    }
+    main{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+
+    /*Homepage*/
+    .homepage h1{
+        font-size:2rem;
+    }
+
+    /*New Section*/
+    .news-container{
+        padding-top:2rem;
+    }
+    .news-carousel{
+        margin:4rem 0;
+        flex-direction:column;
+        align-items:center;
+    }
+    .backChevron,.forwardChevron{
+        display:none;
+    }
+    .previousChevron, .nextChevron{
+        display:block;
+    }
+}
