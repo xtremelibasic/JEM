@@ -7,10 +7,10 @@
         <title>Just Education Matters - Homepage</title>
         <link rel="shortcut icon" type="image/jpg" href="resources/favicon/favicon-32x32.png"/>
         <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/resources.css">
         <script src="https://kit.fontawesome.com/9bb64d8c48.js" crossorigin="anonymous"></script>
         <script src="js/general.js" defer></script>
-        <script src="js/index.js" defer></script>
+        <script src="js/articles.js" defer></script>
     </head>
     <body id="body" style="box-shadow:none">
         <header>
@@ -35,9 +35,9 @@
           </header>
         <aside>
             <ul class="secondary-navigation">
-                <li><a href="#">Your Rights and The Law</a></li>
+                <li><a id="your-rights-and-the-law" href="#">Your Rights and The Law</a></li>
                 <li><a href="#" id="contactUsBtn">Contact Us</a></li>
-                <li><a id="faqBtn"href="#">FAQ</a></li>
+                <li><a href="faqs.html">FAQ</a></li>
             </ul>
         </aside>
        
@@ -46,8 +46,40 @@
             <div class="scrollbar" id="scrollbar"></div>
         </aside> -->
         <main>
+            <div class="articles-content-Container">
+                <div class="article">
+                    <h1>Avoiding exclusion - Early intervention</h1>
+                    <p>Early intervention is important because unless you take action, your child is at risk of permanent exclusion, unauthorised absenteeism, being a school refuser, falling into anti-social behaviour patterns and worst case scenario joining the criminal justice system.</p>
+                    <button class="article-view-button btn" id="article1-view-button" type="button">Read article</button>
+                </div>
+                <div class="article">
+                    <h1>Options for educating your child</h1>
+                    <p>If your child has been permanently excluded from school or is at high risk of exclusion, this could be an indicator that state funded education is not working for them. You might therefore want to consider alternatives to state funded education.</p>
+                    <button class="article-view-button btn" id="article2-view-button" type="button">Read article</button>
+                </div>
+                <div class="article">
+                    <h1>School Exclusions</h1>
+                    <p>Exclusion from school is when your child has been asked not to go into school for a period of time or at all. This is an external exclusion.  Exclusion can also be where your child has to go into isolation at school. This is known as an internal exclusion.</p>
+                    <button class="article-view-button btn" id="article3-view-button" type="button">Read article</button>
+                </div>
+                <div class="article">
+                    <h1>Special Educational Needs (SEN)</h1>
+                    <p>Things you need to know if you think your child has SEN.<br>Your child may have a SEN if they are not learning at the same rate as children of their age and or ability</p>
+                    <button class="article-view-button btn" id="article4-view-button" type="button">Read article</button>
+                </div>
+                <div class="article">
+                    <h1>Education, health and care assessment</h1>
+                    <p>You or the school can apply to the local council where you live for an EHC needs assessment if you think your child has difficulty with their learning which requires education or training provision that is additional to or different from that made generally for other children of their age and or ability.</p>
+                    <button class="article-view-button btn" id="article5-view-button" type="button">Read article</button>
+                </div>
+                <div class="article">
+                    <h1>Education, health and care plan (EHC Plan)</h1>
+                    <p>The EHCP is to make special educational provision to meet a child’s SEN over and above what a school is capable of providing through SEN support.</p>
+                    <button class="article-view-button btn" id="article6-view-button" type="button">Read article</button>
+                </div>
+            </div>
             <div class="modal" id="modal" >
-                <div class="content" id="modalContent"></div>
+                
             </div>
         </main>
         <footer>

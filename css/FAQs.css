@@ -1,0 +1,19 @@
+.faq h1{
+    text-align:left;
+}
+.question{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    margin:1rem 4rem;
+    font-weight: bold;
+    border-bottom:5px solid #A91794;
+}
+.answer{
+    margin:1rem 5rem;
+    text-align: justify;
+}
+
+.answer ul li{
+    list-style-type: disc;
+}

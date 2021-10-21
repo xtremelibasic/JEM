@@ -1,5 +1,4 @@
 
-
 //The hamburger menu function
 let hamburgerMenu = document.getElementById("hamburger-menu");
 
@@ -33,7 +32,6 @@ contactUsBtn.addEventListener("click", ()=>{
         heading.innerText = "Contact Us"
         heading.classList.add("modal-heading");
         modal.prepend(heading);
-        heading.innerText = "Contact Us"
 
         let contactForm = document.createElement("form");
         contactForm.classList.add("content-contact-Us");
@@ -129,28 +127,89 @@ contactUsBtn.addEventListener("click", ()=>{
     }
 })
 
-//FAQ modal
-let faqBtn = document.getElementById("faqBtn");
-faqBtn.addEventListener("click", () => {
-    if(modal.offsetHeight < 10){
+//Your Rights and the Law modal
+let yourRightsAndTheLaw = document.getElementById("your-rights-and-the-law");
+yourRightsAndTheLaw.addEventListener("click", () => {
+   if(modal.offsetHeight < 10){
+        modal.innerHTML = "";   
+        let closeBtn = document.createElement("div");
+        closeBtn.innerHTML = "<i class='fas fa-times'></i>";
+        closeBtn.classList.add("close");
+        modal.prepend(closeBtn)
+        closeBtn.addEventListener("click", function(){
+            modal.classList.remove("show");
+        })
+
+        let modalContent = document.createElement("div");
+        modalContent.classList.add("content")
+        modal.append(modalContent)
+
         let heading = document.createElement("h1");
-        heading.innerText = "Frequently Asked Questions"
+        heading.innerText = "Your Rights and The Law"
         heading.classList.add("modal-heading");
         modal.prepend(heading);
-        modalContent.innerHTML= "";
-        modal.classList.add("show");
-    }
+
+        
+        modal.classList.add("show")
+   }
 })
 
 //Support us modal
+function createSupportUsDivs(modalDiv){
+    let followUsContainer = document.createElement("div");
+    followUsContainer.classList.add("supportUsDivs");
+    let followUsTitle = document.createElement("h2");
+    followUsTitle.innerHTML = "Follow Us and Share Our Content";
+    let followUsParagraph = document.createElement("p");
+    followUsParagraph.innerHTML =  "Morbi ultricies hendrerit eros, commodo laoreet diam consectetur eget. Curabitur augue eros, posuere venenatis neque et, fermentum tempus libero. Vivamus lacinia pulvinar massa vitae molestie. Vivamus eleifend ac elit a egestas. Nunc nec lacus non sem sollicitudin cursus quis et enim. Etiam malesuada magna in erat venenatis, sit amet tristique eros euismod. Sed molestie erat a consectetur interdum.";
+    let socialMediaLinksContainer = document.createElement("div");
+    socialMediaLinksContainer.classList.add("socialMediaLinks")
+    socialMediaLinksContainer.innerHTML = "<ul><li><a href=''><i class='fab fa-facebook-square'></i></a></li><li><a href=''><i class='fab fa-twitter-square'></i></a></ul>";
+    followUsContainer.append(followUsTitle);
+    followUsContainer.append(followUsParagraph);
+    followUsContainer.append(socialMediaLinksContainer);
+    modalDiv.append(followUsContainer);
+
+     let volunteerContainer = document.createElement("div");
+    volunteerContainer.classList.add("supportUsDivs");
+    let volunteerTitle = document.createElement("h2");
+    volunteerTitle.innerHTML = "Volunteer Your Time";
+    let volunteerParagraph = document.createElement("p");
+    volunteerParagraph.innerHTML =  "Morbi ultricies hendrerit eros, commodo laoreet diam consectetur eget. Curabitur augue eros, posuere venenatis neque et, fermentum tempus libero. Vivamus lacinia pulvinar massa vitae molestie. Vivamus eleifend ac elit a egestas. Nunc nec lacus non sem sollicitudin cursus quis et enim. Etiam malesuada magna in erat venenatis, sit amet tristique eros euismod. Sed molestie erat a consectetur interdum.";
+    let contactUsBtn = document.createElement("button");
+    contactUsBtn.classList.add("btn")
+    contactUsBtn.innerHTML = "Contact Us";
+    volunteerContainer.append(volunteerTitle);
+    volunteerContainer.append(volunteerParagraph);
+    volunteerContainer.append(contactUsBtn);
+    modalDiv.append(volunteerContainer);
+}
+
 let supportUs = document.getElementById("support-us");
 supportUs.addEventListener("click", () => {
     if(modal.offsetHeight < 10){
+        console.log("clicked")
+        modal.innerHTML = "";   
+        let closeBtn = document.createElement("div");
+        closeBtn.innerHTML = "<i class='fas fa-times'></i>";
+        closeBtn.classList.add("close");
+        modal.prepend(closeBtn)
+        closeBtn.addEventListener("click", function(){
+            modal.classList.remove("show");
+        })
+
+        let modalContent = document.createElement("div");
+        modalContent.classList.add("content")
+        modal.append(modalContent)
+
         let heading = document.createElement("h1");
-        heading.innerText = "Support Us";
+        heading.innerText = "Support Us".toUpperCase()
         heading.classList.add("modal-heading");
         modal.prepend(heading);
-        modalContent.innerHTML= "";
+        modalContent.style.maxWidth = "800px";
+        modalContent.style.padding = "2rem";
+
+        createSupportUsDivs(modalContent);
         modal.classList.add("show");
     }
 })
