@@ -9,4 +9,3 @@ questionExpandBtnArray.map((expandBtn,index) => {
         answersArray[index].classList.toggle("show");
     })
 })
-

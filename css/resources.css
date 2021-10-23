@@ -1,9 +1,13 @@
+:root{
+    --primaryColour:#650066;
+}
+
 /*General Styles*/
 .article-link{
     text-decoration:underline;
 }
 .article-link:hover{
-    color:#A91794;
+    color:var(--primaryColour);
 }
 
 /* Resources page */

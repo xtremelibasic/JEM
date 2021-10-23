@@ -5,6 +5,7 @@ let hamburgerMenu = document.getElementById("hamburger-menu");
 hamburgerMenu.addEventListener("click", function(){
     let primaryNavigation = document.getElementById("primary-navigation")
     primaryNavigation.classList.toggle("show");
+    primaryNavigation.style.left = "0px";
 })
 
 
@@ -25,7 +26,7 @@ contactUsBtn.addEventListener("click", ()=>{
         })
 
         let modalContent = document.createElement("div");
-        modalContent.classList.add("content")
+        modalContent.classList.add("content");
         modal.append(modalContent)
 
         let heading = document.createElement("h1");
@@ -149,7 +150,111 @@ yourRightsAndTheLaw.addEventListener("click", () => {
         heading.classList.add("modal-heading");
         modal.prepend(heading);
 
-        
+        let educationSection = document.createElement("section");
+        modalContent.append(educationSection)
+
+        let educationSectionTitle = document.createElement("h2");
+        educationSectionTitle.innerHTML = "Education";
+        educationSection.append(educationSectionTitle);
+
+        let link1 = document.createElement("a");
+        link1.innerHTML = "The School Discipline (Pupil Exclusions and Reviews) (England) Regulations 2012 <br>";
+        link1.href = "https://www.legislation.gov.uk/uksi/2012/1033/made";
+        link1.setAttribute("target","_blank");
+        educationSection.append(link1)
+
+        let link2 = document.createElement("a");
+        link2.innerHTML = "School Standards Framework Act <br>";
+        link2.href = "https://www.legislation.gov.uk/ukpga/1998/31/contents";
+        link2.setAttribute("target","_blank");
+        educationSection.append(link2)
+
+        let link3 = document.createElement("a");
+        link3.innerHTML = "the Education Act 2002, as amended by the Education Act 2011 <br>";
+        link3.href = "https://www.legislation.gov.uk/ukpga/2002/32/contents";
+        link3.setAttribute("target","_blank");
+        educationSection.append(link3)
+
+        let link4 = document.createElement("a");
+        link4.innerHTML = "the School Discipline (Pupil Exclusions and Reviews) (England) Regulations 2012 <br>";
+        link4.href = "https://www.legislation.gov.uk/uksi/2012/1033/contents#:~:text=The%20School%20Discipline%20%28Pupil%20Exclusions%20and%20Reviews%29%20%28England%29,be%20brought%20into%20force%20at%20a%20future%20date.";
+        link4.setAttribute("target","_blank");
+        educationSection.append(link4)
+         
+        let link5 = document.createElement("a");
+        link5.innerHTML = "the Education and Inspections Act 2006 <br>";
+        link5.href = "https://www.legislation.gov.uk/ukpga/2006/40/contents";
+        link5.setAttribute("target","_blank");
+        educationSection.append(link5)
+
+        let link6 = document.createElement("a");
+        link6.innerHTML = "the Education Act 1996 <br>";
+        link6.href = "https://www.legislation.gov.uk/ukpga/1996/56/contents";
+        link6.setAttribute("target","_blank");
+        educationSection.append(link6)
+
+        let link7 = document.createElement("a");
+        link7.innerHTML = "the Education (Provision of Full-Time Education for Excluded Pupils) (England) <br>";
+        link7.href = "https://www.legislation.gov.uk/uksi/2007/1870/made";
+        link7.setAttribute("target","_blank");
+        educationSection.append(link7)
+
+        let link8 = document.createElement("a");
+        link8.innerHTML = "Regulations 2007, as amended by the Education (Provision of Full-Time Education for Excluded Pupils) (England) (Amendment) Regulations 2014 <br>";
+        link8.href = "https://www.legislation.gov.uk/uksi/2007/1870/made";
+        link8.setAttribute("target","_blank");
+        educationSection.append(link8)
+
+        let link9 = document.createElement("a");
+        link9.innerHTML = "Department for Education (DfE) – Exclusion from maintained schools, academies and pupil referral units (PRUs) in England September 2017 <br>";
+        link9.href = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/921405/20170831_Exclusion_Stat_guidance_Web_version.pdf";
+        link9.setAttribute("target","_blank");
+        educationSection.append(link9)
+
+        let link10 = document.createElement("a");
+        link10.innerHTML = "Changes to the school exclusions process during the coronavirus outbreak <br>";
+        link10.href = "https://www.gov.uk/government/publications/school-exclusion/changes-to-the-school-exclusion-process-during-the-coronavirus-outbreak";
+        link10.setAttribute("target","_blank");
+        educationSection.append(link10)
+
+        let link11 = document.createElement("a");
+        link11.innerHTML = "Keeping children safe in education: statutory guidance for schools and colleges 2021 <br>";
+        link11.href = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1021914/KCSIE_2021_September_guidance.pdf";
+        link11.setAttribute("target","_blank");
+        educationSection.append(link11)
+
+        let admissionsSection = document.createElement("section");
+        modalContent.append(admissionsSection)
+
+        let admissionsSectionTitle = document.createElement("h2");
+        admissionsSectionTitle.innerHTML = "Admissions";
+        admissionsSection.append(admissionsSectionTitle);
+
+        let link12 = document.createElement("a");
+        link12.innerHTML = "School Admissions Code Mandatory requirements and statutory guidance for admission authorities, governing bodies, local authorities, schools adjudicators and admission appeals panels September 2021";
+        link12.href = "https://drive.google.com/open?id=1DuOtjhBlhF07RcA8xwbsu0qgpQ3SFLWN";
+        link12.setAttribute("target","_blank");
+        admissionsSection.append(link12)
+
+        let link13 = document.createElement("a");
+        link13.innerHTML = "School Admission Appeals Code Statutory guidance for school leaders, governing bodies and local authorities February 2012";
+        link13.href = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/275897/school_admission_appeals_code_1_february_2012.pdf";
+        link13.setAttribute("target","_blank");
+        admissionsSection.append(link13)
+
+        let homeEducationSection = document.createElement("section");
+        modalContent.append(homeEducationSection)
+
+        let homeEducationSectionTitle = document.createElement("h2");
+        homeEducationSectionTitle.innerHTML = "Home education";
+        homeEducationSection.append(homeEducationSectionTitle);
+
+        let link14 = document.createElement("a");
+        link14.innerHTML = "Elective Home Education Departmental Guidance for parents 2019";
+        link14.href = "https://drive.google.com/open?id=1TAGFqMFYqeueH_LwG6VKtMVK_sglWprV";
+        link14.setAttribute("target","_blank");
+        homeEducationSection.append(link14)
+
         modal.classList.add("show")
    }
 })
@@ -245,6 +350,64 @@ healthAndSafety.addEventListener("click", () => {
         modal.classList.add("show");
     }
     
+})
+
+//Safeguarding policy modal
+let dataProtectionPolicy = document.getElementById("data-protection-policy");
+dataProtectionPolicy.addEventListener("click", () => {
+    if(modal.offsetHeight < 10){
+        modal.innerHTML = "";   
+        let closeBtn = document.createElement("div");
+        closeBtn.innerHTML = "<i class='fas fa-times'></i>";
+        closeBtn.classList.add("close");
+        modal.prepend(closeBtn)
+        closeBtn.addEventListener("click", function(){
+            modal.classList.remove("show");
+        })
+
+        let modalContent = document.createElement("div");
+        modalContent.classList.add("content")
+        modal.append(modalContent)
+
+        let heading = document.createElement("h1");
+        heading.innerHTML = "data protection policy".toUpperCase();
+        heading.classList.add("modal-heading");
+        modal.prepend(heading);
+        modalContent.style.maxWidth = "800px";
+        modalContent.style.padding = "2rem";
+
+        let definitionsContainer = document.createElement("div");
+
+        let definitionsTitle = document.createElement("h3");
+        definitionsTitle.innerHTML = "Definitions";
+        definitionsContainer.append(definitionsTitle);
+
+        let definition1 = document.createElement("p");
+        definition1.classList.add("policy-table");
+        definition1.innerHTML = "<b>Organisation</b> means Just Education Matters CIC, a registered Community Interest Organisation.";
+        definitionsContainer.append(definition1);
+
+        let definition2 = document.createElement("p");
+        definition2.classList.add("policy-table");
+        definition2.innerHTML = "<b>GDPR</b> means the General Data Protection Regulation.";
+        definitionsContainer.append(definition2);
+
+        let definition3 = document.createElement("p");
+        definition3.classList.add("policy-table");
+        definition3.innerHTML = "<b>Responsible Person</b> means Data Protection Lead.";
+        definitionsContainer.append(definition3);
+
+        let definition4 = document.createElement("p");
+        definition4.classList.add("policy-table");
+        definition4.innerHTML = "<b>Register of Systems</b> means a register of all systems or contexts in which personal data is processed by the Organisation.";
+        definitionsContainer.append(definition4);
+        modalContent.append(definitionsContainer)
+
+        let policyContent = document.createElement("div");
+        policyContent.innerHTML = "<h3>1. Data protection principles</h3><p>The Organisation is committed to processing data in accordance with its responsibilities under the GDPR.</p><p>Article 5 of the GDPR requires that personal data shall be:<ol><li>processed lawfully, fairly and in a transparent manner in relation to individuals; </li><li>collected for specified, explicit and legitimate purposes and not further processed in a manner that is incompatible with those purposes; further processing for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes shall not be considered to be incompatible with the initial purposes; </li><li>adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed; </li><li>accurate and, where necessary, kept up to date; every reasonable step must be taken to ensure that personal data that are inaccurate, having regard to the purposes for which they are processed, are erased or rectified without delay; </li><li>kept in a form which permits identification of data subjects for no longer than is necessary for the purposes for which the personal data are processed; personal data may be stored for longer periods insofar as the personal data will be processed solely for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes subject to implementation of the appropriate technical and organisational measures required by the GDPR in order to safeguard the rights and freedoms of individuals; </li><li>processed in a manner that ensures appropriate security of the personal data, including protection against unauthorised or unlawful processing and against accidental loss, destruction or damage, using appropriate technical or organisational measures.</li></ol></p> <h3>2. General provisions</h3><ol><li>This policy applies to all personal data processed by the Organisation.</li><li>The Responsible Person shall take responsibility for the Organisation’s ongoing compliance with this policy.</li><li>This policy shall be reviewed at least annually.</li><li>The Organisation shall register with the Information Commissioner’s Office as an organisation that processes personal data.</li><ol><h3>3. Lawful, fair and transparent processing </h3><ol><li>To ensure its processing of data is lawful, fair and transparent, the Organisation shall maintain a Register of Systems.  NTO SELL</li><li>The Register of Systems shall be reviewed at least annually.</li><li>Individuals have the right to access their personal data and any such requests made to the Organisation shall be dealt with in a timely manner.</li></ol> <h3>4. Lawful purposes</h3><ol><li>All data processed by the Organisation must be done on one of the following lawful bases: consent, contract, legal obligation, vital interests, public task or legitimate interests (see ICO guidance for more information).</li><li>The Organisation shall note the appropriate lawful basis in the Register of Systems.</li><li>Where consent is relied upon as a lawful basis for processing data, evidence of opt-in  consent shall be kept with the personal data. </li><li>Where communications are sent to individuals based on their consent, the option for the individual to revoke their consent should be clearly available and systems should be in place to ensure such revocation is reflected accurately in the Organisation’s systems.</li></ol>  <h3>5. Data minimisation</h3><ol><li>The Organisation shall ensure that personal data are adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed. </li><li>The Organisation shall collect the minimum amount of data relevant to the specifics of the work</li></ol><h3>6. Accuracy</h3><ol><li>The Organisation shall take reasonable steps to ensure personal data is accurate.</li><li>Where necessary for the lawful basis on which data is processed, steps shall be put in place to ensure that personal data is kept up to date.</li><li>The Organisation will ensure as far as is reasonably possible that the data collected is provided electronically by the user or verified by them as accurate.</li><h3>7. Archiving / removal</h3><ol><li>To ensure that personal data is kept for no longer than necessary, the Organisation shall put in place an archiving policy for each area in which personal data is processed and review this process annually. </li><li>The archiving policy shall consider what data should/must be retained, for how long, and why.</li></ol><h3>8. Security</h3><ol><li>The Organisation shall ensure that personal data is stored securely using modern software that is kept-up-to-date.</li><li>Access to personal data shall be limited to personnel who need access and appropriate security should be in place to avoid unauthorised sharing of information.</li><li>When personal data is deleted this should be done safely such that the data is irrecoverable.</li><li>Appropriate back-up and disaster recovery solutions shall be in place.</li></ol><h3>9. Breach</h3><p>In the event of a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, personal data, the Organisation shall promptly assess the risk to people’s rights and freedoms and if appropriate report this breach to the ICO (more information on the ICO website).<br>&nbsp;<br>Created: 20 October 2021<br>Review date: 20 October 2022<br>Approved: Board of Directors"
+        modalContent.append(policyContent)
+        modal.classList.add("show");
+    }
 })
 
 //Safeguarding policy modal
@@ -345,3 +508,20 @@ equalityDiversityPolicy.addEventListener("click", () => {
         modal.classList.add("show");
     }
 })
+
+//Merging the primary and secondary menu
+let secondaryBtns = document.querySelectorAll(".secondary-btn");
+let primaryNavigation = document.getElementById("primary-navigation");
+let secondaryNavigation = document.getElementById("secondary-navigation");
+
+console.log(secondaryNavigation)
+window.setInterval(()=>{if(window.innerWidth < 750){
+    Array.from(secondaryBtns).map(btn => {
+        primaryNavigation.appendChild(btn)
+    })
+    
+} else {
+    Array.from(secondaryBtns).map(btn => {
+        secondaryNavigation.appendChild(btn)
+    })
+}},1)

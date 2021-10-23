@@ -1,3 +1,6 @@
+:root{
+    --primaryColour: #A91794;
+}
 html{
     overflow-x:hidden;
     overflow-y:auto;
@@ -41,7 +44,7 @@ a {
     font-family:'Times New Roman', Times, serif !important;
 }
 a:hover{
-    color:#A91794;
+    color:var(--primaryColour);
 }
 p{
     font-size:1rem
@@ -67,7 +70,7 @@ pre{
 .btn{
     padding:1rem 1.5rem;
     border-radius:3px;
-    background-color: #A91794;
+    background-color: var(--primaryColour);
     color:#ffffff;
     border:none;
     font-weight:bold;
@@ -157,16 +160,18 @@ pre{
 
 /*Scrollbar*/
 ::-webkit-scrollbar {
-  width: 15px;
+  width:.7rem;
+
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #46E4C1, #A91794, #FF2372,#FFF64F);
+    
+  background:var(--primaryColour);
   border-radius: 10px;
 }
 
 /*Footer*/
 footer{
-    width:100%;
+    width:103.5%;
     height:auto;
     padding:4rem 0;
     display:flex;
@@ -176,7 +181,7 @@ footer{
 footer p{
     line-height:.5rem;
     font-size:1rem;
-    color:#A91794;
+    color:var(--primaryColour);
 }
 footer p:hover{
     color:#000000;
@@ -188,22 +193,28 @@ footer p:hover{
 }
 .modal{
     padding:2rem 0;
-    width: 70vw;
+    width: 100vw;
     height:auto;
     position:fixed;
     margin:auto;
     text-align: center;
     left:25%;
     background-color: rgb(0, 0, 0,0.9);
+    overflow-y: scroll;
     z-index:10;
     display:none;
-    bottom: 0%; 
+    left:0%;
     top: 0%;
-    overflow-y: scroll;
     max-height: 100%;
+ 
+}
+.policy-table{
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    text-align:left;
 }
 .content{
-    max-width:500px;
+    max-width:800px;
     height:auto;
     display:flex;
     flex-wrap:wrap;
@@ -212,18 +223,22 @@ footer p:hover{
     color:#000000;
 }
 .content-contact-Us, .content-image-consent{
-    padding:3rem;
+    padding:3rem 0;
     display:flex;
     flex-direction:column;
     justify-content:center;
-    align-items:flex-start;
+    align-items:center;
+    margin:0 auto;
 }
 .content-contact-Us label, .content-image-consent label{
+    width:210%;
+    height:auto;
+    text-align:left;
     font-weight:bold;
 }
 
 .content-contact-Us input, .content-image-consent input{
-    width:100%;
+    width:210%;
     border: 10px solid;
     border-image-slice: 1;
     border-width: 5px;
@@ -237,6 +252,7 @@ footer p:hover{
     border-width: 5px;
     border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 }
+
 /*Address Section of the contact page*/
 .addressDiv{
     display:flex;
@@ -299,6 +315,17 @@ footer p:hover{
     list-style-type: none !important;
 }
 
+/*Scroll Design*/
+.scrollbar{
+    width:.5rem;
+    height:25rem;
+    background: linear-gradient(180deg, #46E4C1, var(--primaryColour), #FF2372,#FFF64F);
+    box-shadow: 3px 16px 40px rgb(169, 23, 148, 1);
+    border-radius:50px;
+    position:fixed;
+    top:15%;
+    right:5%;
+}
 
 /*Media Queries*/
 @media screen and (max-width:550px){
@@ -319,8 +346,8 @@ footer p:hover{
         width:100%;
         position:absolute;
         top:150px;
-        left:50px;
-        background-color: #A91794;
+        left:100vw;
+        background-color: var(--primaryColour);
         z-index:10;
         display:none;
     }
@@ -352,7 +379,6 @@ footer p:hover{
         flex-direction:column;
         align-items:center;
         text-align:center;
-    }
 
 }
 
@@ -368,7 +394,7 @@ footer p:hover{
         padding:0;
     }
     .primary-navigation{
-        left:300px;
+        left:100vw;
     }
     /*Modal*/
     .modal{
@@ -378,5 +404,15 @@ footer p:hover{
     .content{
         width:100%;
     }
-
+    /*Scroll Design*/
+    .scrollbar{
+        width:.5rem;
+        height:25rem;
+        background: linear-gradient(180deg, #46E4C1, var(--primaryColour), #FF2372,#FFF64F);
+        box-shadow: 3px 16px 40px rgb(169, 23, 148, 1);
+        border-radius:50px;
+        position:fixed;
+        top:15%;
+        right:2%;
+    }
 }   
