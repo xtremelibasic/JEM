@@ -100,7 +100,7 @@ contactUsBtn.addEventListener("click", ()=>{
 
         let sendMessageBtn = document.createElement("button");
         sendMessageBtn.setAttribute("type", "submit");
-        sendMessageBtn.setAttribute("value", "Send Message");
+        sendMessageBtn.innerHTML = "Send Message"
         sendMessageBtn.classList.add("btn");
         contactForm.append(sendMessageBtn)
 
@@ -510,18 +510,18 @@ equalityDiversityPolicy.addEventListener("click", () => {
 })
 
 //Merging the primary and secondary menu
-let secondaryBtns = document.querySelectorAll(".secondary-btn");
-let primaryNavigation = document.getElementById("primary-navigation");
-let secondaryNavigation = document.getElementById("secondary-navigation");
+// let secondaryBtns = document.querySelectorAll(".secondary-btn");
+// let primaryNavigation = document.getElementById("primary-navigation");
+// let secondaryNavigation = document.getElementById("secondary-navigation");
 
-console.log(secondaryNavigation)
-window.setInterval(()=>{if(window.innerWidth < 750){
-    Array.from(secondaryBtns).map(btn => {
-        primaryNavigation.appendChild(btn)
-    })
+// console.log(secondaryNavigation)
+// window.setInterval(()=>{if(window.innerWidth < 750){
+//     Array.from(secondaryBtns).map(btn => {
+//         primaryNavigation.appendChild(btn)
+//     })
     
-} else {
-    Array.from(secondaryBtns).map(btn => {
-        secondaryNavigation.appendChild(btn)
-    })
-}},1)
+// } else {
+//     Array.from(secondaryBtns).map(btn => {
+//         secondaryNavigation.appendChild(btn)
+//     })
+// }},1)
