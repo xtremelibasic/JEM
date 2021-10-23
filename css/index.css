@@ -11,17 +11,18 @@ p{
 /*Homepage*/
 .homepage{
     width:100vw;
+    max-width:1315px;
     height:100%;
     margin:0 auto 0 auto;
     padding:1rem;
     position:absolute;
     top:0;
     right:0;
-    box-shadow: 3px 17px 40px rgb(169, 23, 148, 0.2);
     z-index:-1;
 }
 .intro{
     /* width:100vw; */
+    max-width:1280px;
     display:inline-block;
     position:relative;
     top:20%;
@@ -30,6 +31,7 @@ p{
 .homepage h1{
     font-size:2.5rem;
     color:var(--primaryColour);
+    
 }
 .homepage p:last-child{
     width:40%;
@@ -54,6 +56,7 @@ p{
 /*Call to action*/
 .call-to-action{
     width:100vw;
+    max-width:1280px;
     height:auto;
     background-color: var(--primaryColour);
     display:flex;
@@ -64,7 +67,7 @@ p{
     padding:9rem 0rem 4rem 0rem;
     position:relative;
     top:95px;
-    left:0px;
+    left:-125px;
     z-index:-5;
 }
 .call-to-action p{
@@ -82,7 +85,8 @@ p{
 
 /*Notification Board: News Section*/
 .news-container{
-    width:100.5%;
+    width:100vw;
+    max-width:1050px;
     height:auto;
     margin:0 auto 0 auto;
     padding:120px 1rem 4rem 1rem;
@@ -106,6 +110,7 @@ p{
     margin-right:auto;
 }
 .news-carousel{
+    max-width:100%;
     display:flex;
     justify-content: center;
     gap:3rem;
@@ -189,15 +194,21 @@ p{
     .homepage{
         width:100vw;
         height:100vh;
-        padding:5rem 0;
+        padding:0rem 0;
         top:0;
         right:0;
     }
     .intro{
-        left:55%;
+        width:100%;
+        left:0%;
+        top:10vh;
     }
-    .important-prompt{
-        width:100vw;
+    .homepage h1{
+        padding-left:40vw;
+    }
+    .homepage p:last-child {
+        padding:2rem;
+        top:3%;
         left:40%;
     }
 
@@ -206,9 +217,9 @@ p{
         width:100vw;
         height:auto;
         top:100px;
-        left:0px;
         margin-top:2rem;
         padding:9rem 2rem 4rem 2rem;
+        left:-5rem;
     }
     /*News Section*/
     .news-container{
@@ -226,6 +237,7 @@ p{
         width:100%;
     }
 }
+
 @media screen and (max-width:750px){
     
     /*General*/
@@ -256,8 +268,9 @@ p{
         /* width:50vw; */
         height:0;
         left:-70px;
-        top:33%;
-        padding-left:30vw;
+        top:60%;
+        width:75%;
+        padding-left:0vw;
     }
     .intro p{
        position:relative;
@@ -277,7 +290,7 @@ p{
         height:auto;
         padding:0;
         padding:1rem 0;
-        top:15vh;
+        top:20vh;
         left:0;
         margin-top:2rem;
     }
@@ -295,5 +308,16 @@ p{
     }
     .previousChevron, .nextChevron{
         display:block;
+    }
+}
+
+@media (max-width:550px){
+    .intro{
+        /* width:50vw; */
+        height:0;
+        left:-70px;
+        top:48%;
+        width:75%;
+        padding-left:0vw;
     }
 }
