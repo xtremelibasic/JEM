@@ -36,7 +36,8 @@ contactUsBtn.addEventListener("click", ()=>{
 
         let contactForm = document.createElement("form");
         contactForm.classList.add("content-contact-Us");
-        contactForm.setAttribute("method", "post");
+        contactForm.setAttribute("action", "https://formsubmit.co/amandanwadukwe@gmail.com");
+        contactForm.setAttribute("method", "POST");
 
         let nameLabel = document.createElement("label");
         nameLabel.innerText = "Name";
@@ -97,9 +98,8 @@ contactUsBtn.addEventListener("click", ()=>{
         contactForm.append(breakTag5)
 
 
-        let sendMessageBtn = document.createElement("input");
+        let sendMessageBtn = document.createElement("button");
         sendMessageBtn.setAttribute("type", "submit");
-        sendMessageBtn.setAttribute("name", "submit");
         sendMessageBtn.setAttribute("value", "Send Message");
         sendMessageBtn.classList.add("btn");
         contactForm.append(sendMessageBtn)
