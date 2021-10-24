@@ -12,10 +12,8 @@ hamburgerMenu.addEventListener("click", function(){
 //The modal element
 let modal = document.getElementById("modal");
 
-//Contact Us modal
-let contactUsBtn = document.getElementById("contactUsBtn");
-contactUsBtn.addEventListener("click", ()=>{
-   if(modal.offsetHeight < 10){
+function createContactUsModal(){
+    if(modal.offsetHeight < 10){
         modal.innerHTML = "";   
         let closeBtn = document.createElement("div");
         closeBtn.innerHTML = "<i class='fas fa-times'></i>";
@@ -108,6 +106,17 @@ contactUsBtn.addEventListener("click", ()=>{
         statusMessage.classList.add("output_message");
         contactForm.append(statusMessage)
 
+        modalContent.append(contactForm)
+        modal.classList.add("show")
+    }
+}
+
+//Contact Us modal
+let contactUsBtn = document.getElementById("contactUsBtn");
+contactUsBtn.addEventListener("click", ()=>{
+   
+        createContactUsModal();
+        
         //Address Section of the contact form
         let addressDiv = document.createElement("div");
         addressDiv.classList.add("addressDiv");
@@ -122,10 +131,10 @@ contactUsBtn.addEventListener("click", ()=>{
         addressDiv.append(addressContent);
         modal.append(addressDiv);
 
-        modalContent.append(contactForm)
+        
 
-        modal.classList.add("show")
-    }
+       
+   
 })
 
 //Your Rights and the Law modal
@@ -142,7 +151,8 @@ yourRightsAndTheLaw.addEventListener("click", () => {
         })
 
         let modalContent = document.createElement("div");
-        modalContent.classList.add("content")
+        modalContent.classList.add("rights-and-law-content");
+        modalContent.style.marginBottom = "4rem";
         modal.append(modalContent)
 
         let heading = document.createElement("h1");
@@ -156,7 +166,7 @@ yourRightsAndTheLaw.addEventListener("click", () => {
         let educationSectionTitle = document.createElement("h2");
         educationSectionTitle.innerHTML = "Education";
         educationSection.append(educationSectionTitle);
-
+        
         let link1 = document.createElement("a");
         link1.innerHTML = "The School Discipline (Pupil Exclusions and Reviews) (England) Regulations 2012 <br>";
         link1.href = "https://www.legislation.gov.uk/uksi/2012/1033/made";
@@ -230,6 +240,7 @@ yourRightsAndTheLaw.addEventListener("click", () => {
         admissionsSectionTitle.innerHTML = "Admissions";
         admissionsSection.append(admissionsSectionTitle);
 
+        
         let link12 = document.createElement("a");
         link12.innerHTML = "School Admissions Code Mandatory requirements and statutory guidance for admission authorities, governing bodies, local authorities, schools adjudicators and admission appeals panels September 2021";
         link12.href = "https://drive.google.com/open?id=1DuOtjhBlhF07RcA8xwbsu0qgpQ3SFLWN";
@@ -508,20 +519,3 @@ equalityDiversityPolicy.addEventListener("click", () => {
         modal.classList.add("show");
     }
 })
-
-//Merging the primary and secondary menu
-// let secondaryBtns = document.querySelectorAll(".secondary-btn");
-// let primaryNavigation = document.getElementById("primary-navigation");
-// let secondaryNavigation = document.getElementById("secondary-navigation");
-
-// console.log(secondaryNavigation)
-// window.setInterval(()=>{if(window.innerWidth < 750){
-//     Array.from(secondaryBtns).map(btn => {
-//         primaryNavigation.appendChild(btn)
-//     })
-    
-// } else {
-//     Array.from(secondaryBtns).map(btn => {
-//         secondaryNavigation.appendChild(btn)
-//     })
-// }},1)
