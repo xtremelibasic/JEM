@@ -293,13 +293,10 @@ p{
         align-items:center;
     }
     /*Design*/
-     .design-circle1,.design-square1,.design-square2{
+     .design-circle1,.design-circle2,.design-square1,.design-square2{
         display:none;
     }
-    .design-circle2{
-        top:460px;
-        right:-40px;
-    }
+    
 
     /*Homepage*/
     .homepage{
