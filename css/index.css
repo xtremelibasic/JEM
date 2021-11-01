@@ -38,7 +38,8 @@ p{
     box-shadow: 3px 17px 40px rgba(101,0,102,0.6);
     position:absolute;
     top:0;
-    left:7.7%;
+    left: 50%;
+    transform: translate(-50%, 0);
     z-index:1;
 }
 .design-square2{
@@ -49,7 +50,8 @@ p{
     box-shadow: 3px 17px 40px rgba(101,0,102,0.6);
     position:absolute;
     top:850px;
-    left:7.7%;
+    left: 50%;
+    transform: translate(-50%, 0);
     z-index:1;
 }
 
@@ -116,7 +118,7 @@ p{
     top:95px;
     /* left:-128px; */
     left:-13%;
-    z-index:-5;
+    /* z-index:-5; */
 }
 .call-to-action p{
     width:50%;
@@ -125,6 +127,8 @@ p{
 .call-to-action-btn{
     background-color:#ffffff;
     color:#000000;
+    position:relative;
+    z-index:11;
 }
 .call-to-action-btn:hover{
     background-color:#000000;
@@ -179,7 +183,7 @@ p{
 .forwardChevron{
     position:relative;
     top:-150px;
-    left:92%;
+    left:91%;
 }
 .previousChevron{
     display:none;

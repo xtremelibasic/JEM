@@ -140,7 +140,7 @@ header{
     border:none;
     font-weight:bold;
 }
-.btn:hover{
+.btn:hover, .call-to-action-btn:hover{
     background-color: #000000;
     color:#ffffff;
     transition: all linear .2s;
@@ -188,7 +188,7 @@ nav{
 }
 
 .hamburger-menu{
-    visibility:hidden;
+    display:none;
     min-height:48px;
     min-width:48px;
     position: relative;
@@ -197,10 +197,11 @@ nav{
 }
 .primary-navigation {
     width: auto;
-    max-width:800px;
+     max-width:800px;
+    
     position: relative;
     top: -80px;
-    left: 40%;
+    left: 50%;
     z-index:3;
 }
 .primary-navigation li {
@@ -461,12 +462,12 @@ footer p:hover{
     
 }
 
-@media screen and (max-width:800px){
+@media screen and (max-width:50rem){
     a{
         font-size:1em;
     }
     .hamburger-menu{
-        visibility:visible ;
+        display: block;
         position:relative;
         z-index:9;
     }
@@ -480,8 +481,9 @@ footer p:hover{
         height:auto;
         position:absolute;
         top:150px;
+        left:100%;
         background-color: white;
-        visibility: hidden;
+        display: hidden;
         z-index:10;
     }
     .primary-navigation li{
@@ -513,6 +515,10 @@ footer p:hover{
         top:20px;
         left:20px;
     }
+    /*Scrollbar*/
+    .scrollbar{
+        display:none;
+    }
     /*Footer*/
     footer{
         flex-direction:column;
@@ -522,7 +528,7 @@ footer p:hover{
 
 }
 
-@media screen and (max-width:1100px){
+@media screen and (max-width:69rem){
     body{
         width:100vw;
     }
@@ -553,9 +559,6 @@ footer p:hover{
         position:fixed;
         top:15%;
         right:2%;
-    }
-    .primary-navigation{
-        left:60%;
     }
 }
 

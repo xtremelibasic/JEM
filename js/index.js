@@ -55,3 +55,41 @@ news.map((newsItem,index) => {
     })
     
 })
+
+
+//Call to action
+document.getElementById("call-to-action-btn").addEventListener("click", function(){
+    createComingSoonModal();
+})
+
+function createComingSoonModal(){
+    if(modal.offsetHeight < 10){
+        modal.innerHTML = "";   
+        let closeBtn = document.createElement("div");
+        closeBtn.innerHTML = "<i class='fas fa-times'></i>";
+        closeBtn.classList.add("close");
+        modal.prepend(closeBtn)
+        closeBtn.addEventListener("click", function(){
+            modal.classList.remove("show");
+        })
+
+        let modalContent = document.createElement("div");
+        modalContent.innerHTML = "<h2>This feature is coming soon</h2>"
+        modalContent.classList.add("content");
+        modal.append(modalContent)
+
+        modal.style.width = "20rem";
+        modal.style.height = "15rem";
+        modal.style.left = "50%";
+        modal.style.top = "50%";
+        modal.style.transform = "translate(-50%, -50%)";
+        modal.style.zIndex = "150";
+
+        modalContent.style.padding = "0";
+        modalContent.style.position = "relative";
+        modalContent.style.top = "50%";
+        modalContent.style.transform = "translate(0, -50%)";
+
+        modal.classList.add("show")
+    }
+}
