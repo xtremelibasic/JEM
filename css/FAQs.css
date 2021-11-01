@@ -29,13 +29,15 @@
 }
 @media screen and (max-width:1100px){
     .faq{
+        width:90%;
         position:relative;
-        top:-100px;
-    }
-    .question{
-        margin-left:-25%;
+        top:-50px;
+        left:3%;
     }
     .answer{
-        margin-left:-25%;
+        margin:1rem 2rem;
+    }
+    .question{
+        margin:1rem 2rem;
     }
 }

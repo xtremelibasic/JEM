@@ -15,7 +15,7 @@ p{
     border-radius:50%;
     background-color: var(--primaryColour);
     position:absolute;
-    top:440px;
+    top:420px;
     left:-80px;
     z-index:-1000;
 }
@@ -25,61 +25,65 @@ p{
     border-radius:50%;
     background-color: var(--primaryColour);
     position:absolute;
-    top:440px;
-    right:-80px;
+    top:420px;
+    right:-62px;
     z-index:-1000;
 }
 .design-square1{
     width:90%;
-    height:90%;
+    max-height:500px;
+    min-height:500px;
+    height:100%;
     background-color:rgba(255, 255, 255, .3);
     box-shadow: 3px 17px 40px rgba(101,0,102,0.6);
     position:absolute;
-    top:4%;
-    right:4%;
-    z-index:-500;
+    top:0;
+    left:7.7%;
+    z-index:1;
 }
 .design-square2{
     width:90%;
-    height:90%;
+    min-height:500px;
+    height:93%;
     background-color:rgba(255, 255, 255, .3);
     box-shadow: 3px 17px 40px rgba(101,0,102,0.6);
     position:absolute;
-    top:140%;
-    right:4%;
-    z-index:-10;
+    top:850px;
+    left:7.7%;
+    z-index:1;
 }
 
 /*Homepage*/
 .homepage{
-    width:100vw;
+    width:80%;
     max-width:1315px;
     height:100%;
     margin:0 auto 0 auto;
-    padding:1rem;
+    padding:0;
     position:absolute;
-    top:-1rem;
-    right:0;
-    z-index:-1;
+    top:-3rem;
+    left:0%;
+    z-index:2;
+}
+.intro p{
+    width:100%;
+    padding:0rem ;
 }
 .intro{
-    /* width:100vw; */
-    max-width:1280px;
     display:inline-block;
     position:relative;
-    top:20%;
+    top:150px;
     left:40%;
 }
+
 .homepage h1{
     font-size:2.5rem;
     color:var(--primaryColour);
     
 }
-.homepage p:last-child{
+.homepage p{
     width:40%;
-    padding:2rem;
     position:relative;
-    top:20%;
     right:0;
 }
 .important-prompt{
@@ -90,7 +94,7 @@ p{
     padding:1rem;
     box-shadow: 3px 17px 40px rgb(255, 246, 79,0.6);
     position:relative;
-    top:35%;
+    top:170px;
     left:520px;
     pointer-events:none;
 }
@@ -98,8 +102,9 @@ p{
 /*Call to action*/
 .call-to-action{
     width:100vw;
-    max-width:1280px;
-    height:auto;
+    max-width:1280px; 
+    max-height:200px;
+    height:17vw;
     background-color: var(--primaryColour);
     display:flex;
     flex-direction:column;
@@ -109,7 +114,8 @@ p{
     padding:9rem 0rem 4rem 0rem;
     position:relative;
     top:95px;
-    left:-127px;
+    /* left:-128px; */
+    left:-13%;
     z-index:-5;
 }
 .call-to-action p{
@@ -127,16 +133,20 @@ p{
 
 /*Notification Board: News Section*/
 .news-container{
-    width:100vw;
-    max-width:1050px;
+    width:80%;
+    max-width:900px;
     height:auto;
     margin:0 auto 0 auto;
-    padding:12rem 1rem 4rem 1rem;
+    padding:6rem 0 4rem 0;
+    position:relative;
+    z-index:3;
 }
 .news{
     width:200px;
     height:auto;
     text-align:center;
+    border:1px solid #46E4C1;
+    padding:1rem;
 }
 .news h1{
     font-size:1rem;
@@ -150,22 +160,26 @@ p{
     display:block;
     margin-left:auto;
     margin-right:auto;
+    background-color: #46E4C1;
+    color:#000000;
 }
 .news-carousel{
-    max-width:100%;
+    max-width:80%;
     display:flex;
     justify-content: center;
+    margin:0 auto;
+    margin-top:5rem;
     gap:3rem;
 }
 .backChevron{
     position:relative;
     top:-150px;
-    left:15%;
+    left:0%;
 }
 .forwardChevron{
     position:relative;
     top:-150px;
-    left:78%;
+    left:92%;
 }
 .previousChevron{
     display:none;
@@ -188,6 +202,7 @@ p{
 }
 .faq{
     width:80vw;
+    max-width:1350px;
     height:auto;
 }
 .faq-container h2{
@@ -195,13 +210,15 @@ p{
     text-align:center;
 }
 .question-answer-container{
+    
     display:flex;
     flex-direction:column;
     align-items: center;
     justify-content: center;
 }
 .question{
-    width:100%;
+    width:85%;
+    
     height:auto;
     padding:0 1rem;
     background-color:var(--primaryColour);
@@ -213,7 +230,7 @@ p{
     margin:.2rem auto;
 }
 .answer{
-    width:90%;
+    width:85%;
     height:auto;
     padding:1rem 0;
     display:none;
@@ -221,6 +238,9 @@ p{
 }
 .answer p,.question p{
     font-size:1rem;
+}
+.expand-btn{
+    background-color: #ffffff;
 }
 
 
@@ -232,18 +252,27 @@ p{
     body{
         padding:1rem;
     }
+    /*Design*/
+     .design-circle1,.design-circle2,.design-square1,.design-square2{
+        display:none;
+    }
+    
     /*Homepage*/
     .homepage{
         width:100vw;
         height:100vh;
         padding:0rem 0;
-        top:0;
+        top:5rem;
         right:0;
     }
     .intro{
         width:100%;
         left:0%;
         top:10vh;
+    }
+    .intro p{
+    width:40%;
+    /* padding:2rem !important; */
     }
     .homepage h1{
         padding-left:40vw;
@@ -292,14 +321,11 @@ p{
         justify-content:center;
         align-items:center;
     }
-    /*Design*/
-     .design-circle1,.design-circle2,.design-square1,.design-square2{
-        display:none;
-    }
     
 
     /*Homepage*/
     .homepage{
+        top:0rem;
         box-shadow:none;
     }
     .homepage h1{
@@ -322,7 +348,9 @@ p{
     .intro p{
        position:relative;
        left:0;
-       padding:0rem;
+       padding:0;
+       margin:0;
+
     }
     .important-prompt{
         display:none;
@@ -346,6 +374,9 @@ p{
         padding-top:2rem;
     }
     .news-carousel{
+        width:100%;
+        max-width:650px;
+        overflow:hidden;
         margin:4rem 0;
         flex-direction:column;
         align-items:center;
@@ -358,14 +389,61 @@ p{
     }
 }
 
-@media (max-width:550px){
-   
+@media (max-width:600px){
     .intro{
         /* width:50vw; */
         height:0;
         left:-70px;
-        top:48%;
-        width:75%;
+        top:70%;
+        width:70%;
         padding-left:0vw;
     }
+    .intro h1{
+        left:0;
+        width:100%;
+    }
+}
+
+@media (min-width:1300px){
+    /*Design*/
+     .design-circle1,.design-circle2,.design-square1,.design-square2{
+        display:none;
+    }
+    .design-square1{
+        top:0;
+    }
+    .intro{
+        max-width:400px;
+    }
+    .homepage{
+        left:8%;
+    }
+    .homepage p{
+        width:100%;
+    }
+    .homepage p:last-child{
+        width:100%;
+    }
+    .important-prompt{
+        width:40%;
+    }
+    .call-to-action{
+        left:-13%;
+    }
+}
+@media(min-width:1500px) {
+    .homepage{
+        position:relative;
+        top:-20rem;
+        left:50px;
+    }
+    .call-to-action{
+        left:-123px;
+    }
+    /* .intro{
+        left:80%
+    }
+    .important-prompt{
+        left:100%;
+    } */
 }

@@ -1,15 +1,51 @@
 :root{
-    --primaryColour: #A91794;
+    --primaryColour: #650066;
 }
+/*Fonts*/
+@font-face {
+    font-family: 'Segoe UI Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Regular'), url('fonts/Segoe UI.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Segoe UI Italic';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Segoe UI Italic'), url('fonts/Segoe UI Italic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Segoe UI Bold';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Segoe UI Bold'), url('fonts/Segoe UI Bold.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Segoe UI Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Bold Italic'), url('fonts/Segoe UI Bold Italic.woff') format('woff');
+}
+
 html{
+    /* width:100vw;
+    padding:0; */
+    max-width:1300px;
     overflow-x:hidden;
     overflow-y:auto;
-    display:flex;
-    justify-content:center;
+    display:block;
+    margin:0 auto;
 }
 body {
     width:80%;
     min-width: 300px;
+    display:block;
     margin:0 auto 0 auto;
     padding: 1rem;
 
@@ -18,25 +54,40 @@ body {
 
 /*General*/
 h1,h2,h3,h4{
-    font-family:'Times New Roman', Times, serif !important;
+       font-family:"Segoe UI Bold" !important;
+}
+h1{
+
+    font-size:2.5rem;
+    color:var(--primaryColour);
 }
 p,li{
-    font-family:sans-serif;
+    font-family:"Segoe UI Regular";
     font-size:1rem;
     line-height: 1.5rem;
     text-align: justify;
 }
-.chevron, .icon{
+.chevron{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border:1px solid #000000;
+}
+.icon {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
 }
+
 .chevron:hover, .icon:hover,.hamburger-menu:hover {
     background-color: #46E4C1;
     transition: all linear 0.2s;
 }
 span{
     cursor:default;
+}
+input,label{
+    display:inline-block;
 }
 li {
     list-style: none;
@@ -45,7 +96,8 @@ a {
     text-decoration: none;
     color: #000000;
     padding: 0.5rem 1rem;
-    font-family:'Times New Roman', Times, serif !important;
+    font-family:"Segoe UI Bold" !important;
+    font-size:.9rem;
     cursor:default;
 }
 a:hover{
@@ -59,6 +111,9 @@ pre{
     font-size:1rem;
     line-height:1.5rem;
 }
+header{
+    max-width: 100%;
+}
 /*The show class changes the display from none to block(or something else) while the reveal uses clip-path to reveal elements*/ 
 .show{
     display:block !important;
@@ -68,9 +123,7 @@ pre{
     color:#ffffff;
     border-radius:50px;
 }
-.reveal{
-    clip-path: inset(0 0 0 0) !important;
-}
+
 .block{
     display:block;
 }
@@ -78,6 +131,8 @@ pre{
 
 /*Buttons*/
 .btn{
+    font-family:"Segoe UI Bold" !important;
+    font-weight:50px;
     padding:1rem 1.5rem;
     border-radius:3px;
     background-color: var(--primaryColour);
@@ -96,30 +151,44 @@ pre{
     max-width: 220px;
     width: 150px;
     height: auto;
+    position:relative;
+    z-index:3;
 }
 .languageOptions{
+    width:auto;
+    height:auto;
     border:none;
     font-weight:bold;
-    position:relative;
-    top:-85px;
-    left:10%;
+    position:absolute;
+    top:0;
+    left:0;
 }
-.secondary-navigation li:nth-child(2),
+nav{
+    display:inline-block;
+}
+/* .secondary-navigation li:nth-c,
 .secondary-navigation li:nth-child(3),
 .secondary-navigation li:first-child{
     width:300px;
-}
-.secondary-navigation li:nth-child(2) a:hover,
-.secondary-navigation li:nth-child(3) a:hover,
-.secondary-navigation li:first-child a:hover,
+} */
+.secondary-navigation li:nth-child(2):hover,
+.secondary-navigation li:nth-child(3):hover,
+.secondary-navigation li:first-child:hover,
 .primary-navigation li a:hover  {
     background-color: #000000;
     color: #ffffff;
     border-radius: 50px;
+    /* padding:.5rem 1.08rem; */
     transition: all linear 0.2s;
 }
+.secondary-navigation li:nth-child(2):hover > a,
+.secondary-navigation li:nth-child(3):hover > a,
+.secondary-navigation li:first-child:hover > a{
+    color:#ffffff;
+}
+
 .hamburger-menu{
-    display:none;
+    visibility:hidden;
     min-height:48px;
     min-width:48px;
     position: relative;
@@ -128,9 +197,11 @@ pre{
 }
 .primary-navigation {
     width: auto;
+    max-width:800px;
     position: relative;
-    top: -120px;
-    left: 470px;
+    top: -80px;
+    left: 40%;
+    z-index:3;
 }
 .primary-navigation li {
     display: inline-block;
@@ -141,26 +212,29 @@ pre{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding:0;
     position: relative;
     top: 0;
-    left: 1rem;
+    left: 0%;
+    z-index:3;
 }
 .secondary-navigation li {
-    margin-top: 2rem;
+    width:100%;
+    margin-top: 1rem;
 }
-.secondary-navigation li:first-child a {
+.secondary-navigation li:first-child  {
     background-color: #FF2372;
-    padding: 0.5rem 1rem;
     border-radius: 50px;
+    padding: 0.5rem 1rem;
     text-align: center;
 }
-.secondary-navigation li:nth-child(2) a {
+.secondary-navigation li:nth-child(2)  {
     background-color: #46E4C1;
     padding: 0.5rem 1rem;
     border-radius: 50px;
     text-align: center;
 }
-.secondary-navigation li:nth-child(3) a {
+.secondary-navigation li:nth-child(3)  {
     background-color: #FFF64F;
     padding: 0.5rem 1rem;
     border-radius: 50px;
@@ -181,10 +255,11 @@ pre{
 
 /*Footer*/
 footer{
-    width:103.5%;
+    width:100%;
     height:auto;
     padding:4rem 0;
     display:flex;
+    margin:0 auto;
     justify-content:space-evenly;
     box-shadow: 3px 17px 40px rgb(169, 23, 148, 0.2);
 }
@@ -254,8 +329,9 @@ footer p:hover{
     margin-top:1rem;
 }
 .rights-and-law-content section a:hover{
-    transform:scale(1.2);
-    transition:transform .2s linear;
+    font-weight:bold;
+    color:var(--primaryColour);
+    transition:all .1s linear;
 }
 .content-contact-Us, .content-image-consent{
     padding:3rem 0;
@@ -271,14 +347,27 @@ footer p:hover{
     text-align:left;
     font-weight:bold;
 }
+.content-image-consent label {
+    width: 80%;
+    height: auto;
+    text-align: left;
+    font-weight: bold;
+}
 
-.content-contact-Us input, .content-image-consent input{
+
+
+.content-contact-Us input{
     width:210%;
     border: 10px solid;
     border-image-slice: 1;
     border-width: 5px;
     border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 }
+.content-image-consent input {
+    width: 80%;
+    border: 2px solid #000000;
+}
+
 .content-contact-Us textarea{
     height:40px;
     width:210%;
@@ -332,7 +421,11 @@ footer p:hover{
     transform:scale(1.4);
     transition:all .2s linear;
 }
-
+/*Footer*/
+.contact-us p, .company-details p{
+    line-height: 1.5rem;
+    color:#000000;
+}
 /*Support Us*/
 .supportUsDivs{
     width:75%;
@@ -359,7 +452,8 @@ footer p:hover{
     border-radius:50px;
     position:fixed;
     top:15%;
-    right:5%;
+    right:8%;
+    z-index:3;
 }
 
 /*Media Queries*/
@@ -372,20 +466,30 @@ footer p:hover{
         font-size:1em;
     }
     .hamburger-menu{
-        display:block;
+        visibility:visible ;
+        position:relative;
+        z-index:9;
     }
     .languageOptions{
         display:none;
     }
     .primary-navigation{
-        width:100%;
+        width:95%;
+        margin:0;
+        padding:0;
+        height:auto;
         position:absolute;
         top:150px;
-        left:100vw;
-        background-color: var(--primaryColour);
+        background-color: white;
+        visibility: hidden;
         z-index:10;
-        display:none;
     }
+    .primary-navigation li{
+        background-color: var(--primaryColour);
+        padding:1rem !important;
+        clip-path: inset(0 0 0 100%); 
+    }
+    
     .primary-navigation li{
         display:block;
         text-align:center;
@@ -414,6 +518,7 @@ footer p:hover{
         flex-direction:column;
         align-items:center;
         text-align:center;
+    }
 
 }
 
@@ -423,13 +528,11 @@ footer p:hover{
     }
     /*Navigation*/
     .secondary-navigation{
+        width:100%;
         top:-60px;
         left:5%;
         align-items:flex-start;
-        padding:0;
-    }
-    .primary-navigation{
-        left:100vw;
+        margin:4rem 0;
     }
     /*Modal*/
     .modal{
@@ -451,4 +554,35 @@ footer p:hover{
         top:15%;
         right:2%;
     }
-}   
+    .primary-navigation{
+        left:60%;
+    }
+}
+
+@media(min-width:1300px) {
+    .primary-navigation{
+        left:90%;
+    }
+
+}
+
+@keyframes reveal{
+    from {
+        clip-path: inset(0 0 0 100%);
+        left:0;
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+        display:block;
+    }
+}
+@keyframes conceal {
+    from {
+        clip-path: inset(0 0 0 0);
+        display:block;
+    }
+    to {
+        clip-path: inset(0 0 0 100%);
+        left:100vw;
+    }
+}

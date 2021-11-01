@@ -6,6 +6,7 @@ let optionsForEducatingYourChild = document.getElementById("article3-view-button
 let SENArticle = document.getElementById("article4-view-button");
 let EHCAArticle = document.getElementById("article5-view-button");
 let EHCPArticle = document.getElementById("article6-view-button");
+console.log(avoidingExclusionArticle)
 
 function createContactUsModal(){
     articleModal.innerHTML = "";

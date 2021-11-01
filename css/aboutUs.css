@@ -1,15 +1,16 @@
 .about-us-container, .our-services{
-    width:80%;
+    width:75%;
     position:relative;
     top:-180px;
-    left:22%;
+    left:24%;
 }
 .our-services-details{
     margin:3rem 0;
 }
 .our-services-details ul{
     display:flex;
-    justify-content:space-evenly;
+    gap:15rem;
+    justify-content: center;
     margin-right:3rem;
     font-weight:bold;
 }
@@ -28,6 +29,7 @@
 .price{
     display:grid;
     grid-template-columns: 1fr 1fr;
+    gap:5rem;
 }
 .disclaimer{
     margin:3rem 0;
@@ -45,6 +47,10 @@
 @media screen and (max-width:1100px){
     .about-us-container, .our-services{
         position:relative;
-        top:-100px;
+        top:-50px;
+        left:9%;
+    }
+    .our-services-details ul{
+        gap:10rem;
     }
 }
