@@ -373,8 +373,8 @@ contactUsBtn.addEventListener("click", ()=>{
         let addressContent = document.createElement("p");
         addressContent.classList.add("addressContent");
         addressContent.innerHTML = "Just Education Matters CIC,<br>Kemp House,<br> 152-160 City Road,<br>London EC1V 2NX<br>&nbsp;<br>Telephone: 07936 449 834<br>&nbsp;<br>Email: info@justeducationmatters.org<br>Web: www.justeducationmatters.org";
-        addressDiv.append(addressIcon);
         addressDiv.append(addressContent);
+        addressDiv.append(addressIcon);
         modal.append(addressDiv);
 
         

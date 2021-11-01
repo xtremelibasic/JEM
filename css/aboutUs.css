@@ -6,6 +6,7 @@
 }
 .our-services-details{
     margin:3rem 0;
+    width:auto;
 }
 .our-services-details ul{
     display:flex;
@@ -13,10 +14,9 @@
     justify-content: center;
     margin-right:3rem;
     font-weight:bold;
-}
-.our-services-details ul{
     cursor:default;
 }
+
 .service-container{
     margin-bottom:3rem;
 }
@@ -51,6 +51,9 @@
         left:9%;
     }
     .our-services-details ul{
-        gap:10rem;
+        justify-content:flex-start;
+        padding:0;
+        gap:10%;
+        margin:0;
     }
 }

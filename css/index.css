@@ -188,14 +188,14 @@ p{
 .previousChevron{
     display:none;
     position:relative;
-    top:0px;
-    left:47%
+    top:2rem;
+    left:46%
 }
 .nextChevron{
     display:none;
     position:relative;
-    top:0px;
-    left:47%;
+    top:-2rem;
+    left:46%;
 }
 /*FAQ Section*/
 .faq-container{
@@ -224,7 +224,6 @@ p{
 }
 .question{
     width:85%;
-    
     height:auto;
     padding:0 1rem;
     background-color:var(--primaryColour);
@@ -234,6 +233,9 @@ p{
     justify-content: space-between;
     align-items:center;
     margin:.2rem auto;
+}
+.question img{
+    margin: 0 1rem;
 }
 .answer{
     width:85%;

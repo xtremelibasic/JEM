@@ -381,7 +381,7 @@ footer p:hover{
 .addressDiv{
     display:flex;
     justify-content:space-evenly;
-    margin:2rem 0;
+    margin:2rem 30%;
 }
 .addressIcon{
     width:10rem;
