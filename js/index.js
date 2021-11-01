@@ -10,6 +10,7 @@ questionExpandBtnArray.map((expandBtn,index) => {
     })
 })
 
+//News carousel
 let news = Array.from(document.querySelectorAll(".news"));
 let lastIndex = news.length - 1;
 news.map((newsItem,index) => {
@@ -39,10 +40,9 @@ news.map((newsItem,index) => {
                         let currentIndex = index;
                         nextIndex = currentIndex + 1;
                 }
-                if(nextIndex >= news.length){
+                if(nextIndex >= news.length && nextIndex <= news.length-1){
                    console.log("end of carousel")
-                } else {
-                    
+                } else {      
                     if(index < nextIndex){
                         newsItem.style.display = "none"
                     } else{
