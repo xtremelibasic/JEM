@@ -189,6 +189,7 @@ events.map(event => {
         contactForm.append(nameLabel);
 
         let nameInput = document.createElement("input");
+        nameInput.setAttribute("required", "");
         nameInput.setAttribute("type", "text");
         nameInput.setAttribute("id", "nameInput");
         nameInput.setAttribute("name", "nameInput")
@@ -202,7 +203,8 @@ events.map(event => {
         emailLabel.setAttribute("for", "emailInput");
         contactForm.append(emailLabel)
 
-        let emailInput = document.createElement("input")
+        let emailInput = document.createElement("input");
+        emailInput.setAttribute("required", "");
         emailInput.setAttribute("type", "email");
         emailInput.setAttribute("id", "emailInput");
         emailInput.setAttribute("name", "emailInput");
@@ -217,6 +219,7 @@ events.map(event => {
         contactForm.append(subjectLabel)
 
         let subjectInput = document.createElement("input");
+        subjectInput.setAttribute("required", "");
         subjectInput.value = "Event Registration";
         subjectInput.setAttribute("id", "subjectInput");
         subjectInput.setAttribute("type", "text");
@@ -232,6 +235,7 @@ events.map(event => {
         contactForm.append(messageLabel)
 
         let messageTextArea = document.createElement("textarea");
+        messageTextArea.setAttribute("required", "");
         messageTextArea.value = "I want to register for the " + event.children.item(1).innerHTML + " event";
         messageTextArea.setAttribute("id", "messageTextArea");
         messageTextArea.setAttribute("name", "messageTextArea")
@@ -292,7 +296,7 @@ function createContactUsModal(){
         contactForm.append(nameLabel);
 
         let nameInput = document.createElement("input");
-        nameInput.setAttribute("type", "text");
+        nameInput. setAttribute("required", "");
         nameInput.setAttribute("id", "nameInput");
         nameInput.setAttribute("name", "nameInput")
         contactForm.append(nameInput)
@@ -306,6 +310,7 @@ function createContactUsModal(){
         contactForm.append(emailLabel)
 
         let emailInput = document.createElement("input")
+        emailInput.setAttribute("required", "");
         emailInput.setAttribute("type", "email");
         emailInput.setAttribute("id", "emailInput");
         emailInput.setAttribute("name", "emailInput");
@@ -320,6 +325,7 @@ function createContactUsModal(){
         contactForm.append(subjectLabel)
 
         let subjectInput = document.createElement("input");
+        subjectInput.setAttribute("required", "");
         subjectInput.setAttribute("id", "subjectInput");
         subjectInput.setAttribute("type", "text");
         subjectInput.setAttribute("name", "subjectInput")
@@ -333,7 +339,8 @@ function createContactUsModal(){
         messageLabel.innerText = "Message"
         contactForm.append(messageLabel)
 
-        let messageTextArea = document.createElement("textarea")
+        let messageTextArea = document.createElement("textarea");
+        messageTextArea.setAttribute("required", "");
         messageTextArea.setAttribute("id", "messageTextArea");
         messageTextArea.setAttribute("name", "messageTextArea")
         contactForm.append(messageTextArea)

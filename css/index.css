@@ -447,6 +447,17 @@ p{
     }
     .call-to-action{
         left:-123px;
+        top:-250px;
+    }
+    .news-container{
+        top:-250px;
+    }
+    .faq-container{
+        top:-250px;
+    }
+    footer{
+        position:relative;
+        top:-200px;
     }
     /* .intro{
         left:80%

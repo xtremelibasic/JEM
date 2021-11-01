@@ -2,32 +2,32 @@ let ourServices = document.getElementById("our-services");
 let pricing = document.getElementById("pricing");
 let servicesContent = document.getElementById("services-content");
 
-function createTrainingsModal(serviceName){
-    if(modal.offsetHeight < 10){
-        modal.innerHTML = "";   
-        let closeBtn = document.createElement("div");
-        closeBtn.innerHTML = "<i class='fas fa-times'></i>";
-        closeBtn.classList.add("close");
-        modal.prepend(closeBtn)
-        closeBtn.addEventListener("click", function(){
-            modal.classList.remove("show");
-        })
+// function createTrainingsModal(serviceName){
+//     if(modal.offsetHeight < 10){
+//         modal.innerHTML = "";   
+//         let closeBtn = document.createElement("div");
+//         closeBtn.innerHTML = "<i class='fas fa-times'></i>";
+//         closeBtn.classList.add("close");
+//         modal.prepend(closeBtn)
+//         closeBtn.addEventListener("click", function(){
+//             modal.classList.remove("show");
+//         })
 
-        let modalContent = document.createElement("div");
-        modalContent.classList.add("content");
-        modal.append(modalContent)
+//         let modalContent = document.createElement("div");
+//         modalContent.classList.add("content");
+//         modal.append(modalContent)
 
-        let heading = document.createElement("h1");
-        heading.innerText = "Trainings"
-        heading.classList.add("modal-heading");
-        modal.prepend(heading);
+//         let heading = document.createElement("h1");
+//         heading.innerText = "Trainings"
+//         heading.classList.add("modal-heading");
+//         modal.prepend(heading);
 
-        let trainingsContainer = document.createElement("div");
+//         let trainingsContainer = document.createElement("div");
 
-        modalContent.append(contactForm)
-         modal.classList.add("trainingsContainer")
-    }
-}
+//         modalContent.append(contactForm)
+//          modal.classList.add("trainingsContainer")
+//     }
+// }
 
 function createContactUsModal(serviceName){
     if(modal.offsetHeight < 10){
@@ -60,6 +60,7 @@ function createContactUsModal(serviceName){
         contactForm.append(nameLabel);
 
         let nameInput = document.createElement("input");
+        nameInput.setAttribute("required", "");
         nameInput.setAttribute("type", "text");
         nameInput.setAttribute("id", "nameInput");
         nameInput.setAttribute("name", "nameInput")
@@ -74,6 +75,7 @@ function createContactUsModal(serviceName){
         contactForm.append(emailLabel)
 
         let emailInput = document.createElement("input")
+        nameInput.setAttribute("required", "");
         emailInput.setAttribute("type", "email");
         emailInput.setAttribute("id", "emailInput");
         emailInput.setAttribute("name", "emailInput");
@@ -265,7 +267,11 @@ ourServices.addEventListener("click", () => {
     requestServiceBtn3.setAttribute("type", "button");
     requestServiceBtn3.classList.add("btn");
     requestServiceBtn3.innerHTML = "View Training videos"
-    service3Container.append(requestServiceBtn3)
+    service3Container.append(requestServiceBtn3);
+    // requestServiceBtn3.addEventListener("click", () => {
+    //     console.log("clicked")
+    //     createComingSoonModal;
+    // })
 
 
     let service4Container = document.createElement("div");
@@ -285,13 +291,43 @@ ourServices.addEventListener("click", () => {
     requestServiceBtn4.innerHTML = "Request Service";
     service4Container.append(requestServiceBtn4);
 
-
+    
     servicesContent.append(service1Container);
     servicesContent.append(service2Container);
     servicesContent.append(service3Container);
     servicesContent.append(service4Container);
 })
+function createComingSoonModal(){
+    if(modal.offsetHeight < 10){
+        modal.innerHTML = "";   
+        let closeBtn = document.createElement("div");
+        closeBtn.innerHTML = "<i class='fas fa-times'></i>";
+        closeBtn.classList.add("close");
+        modal.prepend(closeBtn)
+        closeBtn.addEventListener("click", function(){
+            modal.classList.remove("show");
+        })
 
+        let modalContent = document.createElement("div");
+        modalContent.innerHTML = "<h2>This feature is coming soon</h2>"
+        modalContent.classList.add("content");
+        modal.append(modalContent)
+
+        modal.style.width = "30%";
+        modal.style.height = "40%";
+        modal.style.left = "50%";
+        modal.style.top = "50%";
+        modal.style.transform = "translate(-50%, -50%)";
+        modal.style.zIndex = "150";
+
+        modalContent.style.padding = "0";
+        modalContent.style.position = "relative";
+        modalContent.style.top = "50%";
+        modalContent.style.transform = "translate(0, -50%)";
+
+        modal.classList.add("show")
+    }
+}
 pricing.addEventListener("click", () => {
     servicesContent.innerHTML = "";
 

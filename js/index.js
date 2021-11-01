@@ -7,8 +7,17 @@ let answersArray = Array.from(answers);
 questionExpandBtnArray.map((expandBtn,index) => {
     expandBtn.addEventListener("click", () => {
         answersArray[index].classList.toggle("show");
+        var imgSrc = expandBtn.src;
+        if (imgSrc.indexOf('resources/icons/remove_black_24dp.svg')!=-1) {
+            expandBtn.src  = 'resources/icons/add_black_24dp (1).svg';
+        }
+         else {
+          expandBtn.src = 'resources/icons/remove_black_24dp.svg';
+       }
+
     })
 })
+
 
 //News carousel
 let news = Array.from(document.querySelectorAll(".news"));
@@ -78,8 +87,8 @@ function createComingSoonModal(){
         modalContent.classList.add("content");
         modal.append(modalContent)
 
-        modal.style.width = "20rem";
-        modal.style.height = "15rem";
+        modal.style.width = "30%";
+        modal.style.height = "40%";
         modal.style.left = "50%";
         modal.style.top = "50%";
         modal.style.transform = "translate(-50%, -50%)";

@@ -16,7 +16,10 @@
     font-weight:bold;
     cursor:default;
 }
-
+.our-services-details ul li{
+    min-width:10rem;
+    text-align:center;
+}
 .service-container{
     margin-bottom:3rem;
 }
@@ -48,7 +51,7 @@
     .about-us-container, .our-services{
         position:relative;
         top:-50px;
-        left:9%;
+        left:11%;
     }
     .our-services-details ul{
         justify-content:flex-start;
