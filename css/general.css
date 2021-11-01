@@ -447,7 +447,7 @@ footer p:hover{
 /*Scroll Design*/
 .scrollbar{
     width:.5rem;
-    height:25rem;
+    height:60vh;
     background: linear-gradient(180deg, #46E4C1, var(--primaryColour), #FF2372,#FFF64F);
     box-shadow: 3px 16px 40px rgb(169, 23, 148, 1);
     border-radius:50px;
