@@ -58,6 +58,7 @@ p{
 /*Homepage*/
 .homepage{
     width:80%;
+    min-height:600px;
     max-width:1315px;
     height:100%;
     margin:0 auto 0 auto;
@@ -411,6 +412,11 @@ p{
         width:100%;
     }
 }
+@media (min-width:600px) and (max-width:750px) {
+    .intro{
+        position:relative;
+    }
+}​
 
 @media (min-width:1300px){
     /*Design*/

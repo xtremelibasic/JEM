@@ -466,6 +466,9 @@ footer p:hover{
     a{
         font-size:1em;
     }
+    /* p{
+        word-spacing: 1rem;
+    } */
     .hamburger-menu{
         display: block;
         position:relative;
