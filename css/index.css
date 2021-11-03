@@ -20,14 +20,17 @@ p{
     z-index:-1000;
 }
 .design-circle2{
-    width:560px;
-    height:350px;
-    border-radius:50%;
-    background-color: var(--primaryColour);
-    position:absolute;
-    top:420px;
-    right:-62px;
-    z-index:-1000;
+    width: 46%;
+    height: 165px;
+    border-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 0%;
+    background-color: var(--primaryColour); 
+    position: absolute;
+    top: 420px;
+    left: 55%;
+     z-index: -1000; 
+   
 }
 .design-square1{
     width:90%;
@@ -49,6 +52,8 @@ p{
     background-color:rgba(255, 255, 255, .3);
     box-shadow: 3px 17px 40px rgba(101,0,102,0.6);
     position:absolute;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
     top:850px;
     left: 50%;
     transform: translate(-50%, 0);
@@ -72,13 +77,19 @@ p{
     width:100%;
     padding:0rem ;
 }
-.intro{
-    display:inline-block;
-    position:relative;
-    top:150px;
-    left:40%;
+.intro{ 
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    top: 150px;
 }
-
+.intro h1{
+    position:relative;
+    top:0;
+    left:-8rem;
+}
 .homepage h1{
     font-size:2.5rem;
     color:var(--primaryColour);
@@ -88,9 +99,11 @@ p{
     width:40%;
     position:relative;
     right:0;
+    top:24%
 }
 .important-prompt{
     width:400px;
+   
     background-color:var(--primaryColour);
     color:#ffffff;
     font-weight:bold;
@@ -107,6 +120,7 @@ p{
     width:100vw;
     max-width:1280px; 
     max-height:200px;
+    min-width:300px;
     height:17vw;
     background-color: var(--primaryColour);
     display:flex;
@@ -190,13 +204,13 @@ p{
     display:none;
     position:relative;
     top:2rem;
-    left:46%
+    left:0
 }
 .nextChevron{
     display:none;
     position:relative;
     top:-2rem;
-    left:46%;
+    left:0;
 }
 /*FAQ Section*/
 .faq-container{
@@ -277,7 +291,7 @@ p{
     .intro{
         width:100%;
         left:0%;
-        top:10vh;
+        top:4vh;
     }
     .intro p{
     width:40%;
@@ -287,9 +301,13 @@ p{
         padding-left:40vw;
     }
     .homepage p:last-child {
-        padding:2rem;
-        top:3%;
-        left:40%;
+        padding: 2rem;
+        top: -3rem;
+        left: 0;
+    }
+    .important-prompt{
+        left:40% !important;
+         max-height:200px;
     }
 
     /*Call-to-action*/
@@ -343,14 +361,15 @@ p{
         left:25%;
     }
     .homepage p:last-child{
-        width:100%;
-        padding:0;
+        width: 100%;
+        padding: 0;
+        left: 30%;
     }
     .intro{
         /* width:50vw; */
         height:0;
         left:-70px;
-        top:60%;
+        top:50%;
         width:75%;
         padding-left:0vw;
     }
@@ -367,6 +386,9 @@ p{
         padding:0;
         top:-45px;
         left:0; */
+    }
+    .homepage p:last-child{
+        top:0;
     }
     /*Call-to-action*/
     .call-to-action{
@@ -396,6 +418,11 @@ p{
     .previousChevron, .nextChevron{
         display:block;
     }
+     .news-container{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+    }
 }
 
 @media (max-width:600px){
@@ -403,35 +430,52 @@ p{
         /* width:50vw; */
         height:0;
         left:-70px;
-        top:70%;
+        top:50%;
         width:70%;
         padding-left:0vw;
+        margin-top:5rem;
     }
     .intro h1{
-        left:0;
+        left:30%;
         width:100%;
     }
+     .homepage p:last-child{
+        left:40%;
+     }
+     .call-to-action{
+         /* top:120%; */
+         margin-top:11rem;
+     }
 }
-@media (min-width:600px) and (max-width:750px) {
+@media (max-width:420px){
+    .intro{
+        margin-left:1rem;
+        margin-top:3rem;
+    }
+}
+/* @media (min-width:600px)and(max-width:750px){
     .intro{
         position:relative;
     }
-}​
+}​ */
 
 @media (min-width:1300px){
     /*Design*/
-     .design-circle1,.design-circle2,.design-square1,.design-square2{
+    .design-circle1, .design-circle2, .design-square1, .design-square2{
         display:none;
     }
     .design-square1{
         top:0;
     }
     .intro{
-        max-width:400px;
+        max-width:100%;
     }
     .homepage{
-        left:8%;
+        max-width: 900px;
+        padding:0 10rem;
+        left:15%;
     }
+    
     .homepage p{
         width:100%;
     }

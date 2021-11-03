@@ -57,8 +57,8 @@ h1,h2,h3,h4{
        font-family:"Segoe UI Bold" !important;
 }
 h1{
-
-    font-size:2.5rem;
+    font-size:3vw;
+    /* font-size:2.5rem; */
     color:var(--primaryColour);
 }
 p,li{
@@ -113,6 +113,7 @@ pre{
 }
 header{
     max-width: 100%;
+    min-width:300px;
 }
 /*The show class changes the display from none to block(or something else) while the reveal uses clip-path to reveal elements*/ 
 .show{
@@ -276,6 +277,7 @@ footer p:hover{
 /*Modal*/
 .modal-heading{
     color:#ffffff;
+    margin:.5rem;
 }
 .modal{
     padding:2rem 0;
@@ -287,7 +289,7 @@ footer p:hover{
     left:25%;
     background-color: rgb(0, 0, 0,0.9);
     overflow-y: scroll;
-    z-index:10;
+    z-index:100;
     display:none;
     left:0%;
     top: 0%;
@@ -335,7 +337,7 @@ footer p:hover{
     transition:all .1s linear;
 }
 .content-contact-Us, .content-image-consent{
-    padding:3rem 0;
+    padding:.5rem 0;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -359,7 +361,7 @@ footer p:hover{
 
 .content-contact-Us input{
     width:210%;
-    border: 10px solid;
+    border: 5px solid;
     border-image-slice: 1;
     border-width: 5px;
     border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
@@ -382,7 +384,7 @@ footer p:hover{
 .addressDiv{
     display:flex;
     justify-content:space-evenly;
-    margin:2rem 30%;
+    margin:.2rem 30%;
 }
 .addressIcon{
     width:10rem;
@@ -390,8 +392,9 @@ footer p:hover{
 }
 .addressContent{
     color:#ffffff;
-    line-height:1.5rem;
+    line-height:1.2rem;
     text-align:left;
+    font-size:1rem;
 }
 
 /*Policies*/
@@ -458,8 +461,18 @@ footer p:hover{
 }
 
 /*Media Queries*/
-@media screen and (max-width:550px){
-    
+@media screen and (max-width:500px){
+    h1{
+        font-size:1.5rem;
+    }
+    .modal{
+        padding:2rem 0;
+        width:100vw;
+    }
+    .content, .rights-and-law-content{
+        width:100%;
+        padding:1rem;
+    }
 }
 
 @media screen and (max-width:50rem){
@@ -528,6 +541,16 @@ footer p:hover{
         align-items:center;
         text-align:center;
     }
+    .miscellaneous, .company-details{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        line-height: 1rem;
+    }
+    .contact-us p, .company-details p{
+        text-align: center;
+    }
 
 }
 
@@ -542,7 +565,8 @@ footer p:hover{
         top:-60px;
         left:5%;
         align-items:flex-start;
-        margin:4rem 0;
+        margin:0;
+        margin-bottom:2rem;
     }
     /*Modal*/
     .modal{

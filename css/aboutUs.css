@@ -47,6 +47,9 @@
     height:150px;
     margin-right:2rem;
 }
+.collaborations a:hover{
+    text-decoration:underline;
+}
 @media screen and (max-width:1100px){
     .about-us-container, .our-services{
         position:relative;
