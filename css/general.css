@@ -474,7 +474,7 @@ footer p:hover{
         width:100vw;
     }
     .content, .rights-and-law-content{
-        width:100%;
+        width:80vw;
         padding:1rem;
     }
 }
