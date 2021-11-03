@@ -288,7 +288,7 @@ footer p:hover{
     margin:.5rem;
 }
 .modal{
-    padding:2rem 0;
+    /* padding:2rem 0; */
     width: 100vw;
     min-width:300px;
     height:auto;
@@ -347,7 +347,7 @@ footer p:hover{
     transition:all .1s linear;
 }
 .content-contact-Us, .content-image-consent{
-    padding:.5rem 0;
+    padding:.2rem 0;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -407,6 +407,7 @@ footer p:hover{
     line-height:1.2rem;
     text-align:left;
     font-size:1rem;
+    margin:0;
 }
 
 /*Policies*/
