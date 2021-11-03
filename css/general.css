@@ -125,11 +125,7 @@ header{
     color:#ffffff;
     border-radius:50px;
 }
-.faq-active > .faq-active a{
-    background:#000000 !important;
-    color:#ffffff;
-    border-radius:50px;
-}
+
 .highlight{
     background-color:#46E4C1;
     transition: all linear 0.2s;
