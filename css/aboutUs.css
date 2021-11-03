@@ -47,6 +47,10 @@
     height:150px;
     margin-right:2rem;
 }
+.float{
+    display:none;
+    float:left;
+}
 .collaborations a:hover{
     text-decoration:underline;
 }
@@ -61,5 +65,16 @@
         padding:0;
         gap:10%;
         margin:0;
+    }
+}
+@media screen and (max-width:750px){
+    .team-member{
+        margin-top:4rem;
+    }
+    .no-float{
+        display:none;
+    }
+    .float{
+        display:inline-block;
     }
 }
