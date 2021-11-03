@@ -9,7 +9,7 @@ let primaryNavigation = document.getElementById("primary-navigation")
  let hamburgerMenu = document.getElementById("hamburger-menu");
  console.log(hamburgerMenu)
 hamburgerMenu.addEventListener("click", function(){
-    
+    hamburgerMenu.classList.toggle("highlight");
     primaryNavigation.classList.toggle("show");
     
 

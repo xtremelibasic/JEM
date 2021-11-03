@@ -468,7 +468,11 @@ p{
         top:0;
     }
     .intro{
+        align-items:center;
         max-width:100%;
+    }
+    .intro{
+        padding:0 5rem;
     }
     .homepage{
         max-width: 900px;
@@ -479,14 +483,14 @@ p{
     .homepage p{
         width:100%;
     }
-    .homepage p:last-child{
-        width:100%;
-    }
+   
     .important-prompt{
-        width:40%;
+        width:60%;
+        left:30%;
     }
     .call-to-action{
         left:-13%;
+        top:50px;
     }
 }
 @media(min-width:1500px) {
@@ -495,15 +499,18 @@ p{
         top:-20rem;
         left:50px;
     }
+    .important-prompt{
+        top:10rem;
+    }
     .call-to-action{
         left:-123px;
-        top:-250px;
+        top:-350px;
     }
     .news-container{
-        top:-250px;
+        top:-300px;
     }
     .faq-container{
-        top:-250px;
+        top:-300px;
     }
     footer{
         position:relative;
