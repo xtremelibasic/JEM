@@ -286,6 +286,7 @@ footer p:hover{
 .modal{
     padding:2rem 0;
     width: 100vw;
+    min-width:300px;
     height:auto;
     position:fixed;
     margin:auto;
@@ -307,6 +308,7 @@ footer p:hover{
 }
 .content{
     max-width:800px;
+    min-width:300px;
     height:auto;
     display:flex;
     flex-wrap:wrap;
@@ -349,12 +351,14 @@ footer p:hover{
     margin:0 auto;
 }
 .content-contact-Us label, .content-image-consent label{
+    min-width:200px;
     width:210%;
     height:auto;
     text-align:left;
     font-weight:bold;
 }
 .content-image-consent label {
+    min-width:200px;
     width: 80%;
     height: auto;
     text-align: left;
@@ -467,14 +471,17 @@ footer p:hover{
 /*Media Queries*/
 @media screen and (max-width:500px){
     h1{
-        font-size:1.5rem;
+        font-size:1.2rem;
+    }
+    .content-contact-Us input, .content-contact-Us label, .content-contact-Us textarea{
+        width:120%;
     }
     .modal{
         padding:2rem 0;
         width:100vw;
     }
     .content, .rights-and-law-content{
-        width:80vw;
+        width:75vw;
         padding:1rem;
     }
 }
@@ -575,11 +582,11 @@ footer p:hover{
     /*Modal*/
     .modal{
         left:0%;
-        width:100vw;
+        /* width:100vw; */
     }
-    .content{
+    /* .content{
         width:100%;
-    }
+    } */
 
     /*Scroll Design*/
     .scrollbar{

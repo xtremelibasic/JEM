@@ -499,8 +499,11 @@ p{
         top:-20rem;
         left:50px;
     }
+    .homepage p:last-child {
+        top:50%;
+    }
     .important-prompt{
-        top:10rem;
+        top:14rem !important;
     }
     .call-to-action{
         left:-123px;
