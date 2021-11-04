@@ -108,6 +108,7 @@ a {
 a:hover{
     color:var(--primaryColour);
 }
+
 p{
     font-size:1rem
 }
@@ -171,9 +172,13 @@ header{
     height:auto;
     border:none;
     font-weight:bold;
-    position:absolute;
-    top:0;
-    left:0;
+    position:relative;
+    top: -80px;
+    left: 5%;
+    z-index:100;
+}
+.languageOptions:hover{
+    color:var(--primaryColour)
 }
 nav{
     display:inline-block;
@@ -212,7 +217,7 @@ nav{
      max-width:800px;
     position: relative;
     top: -80px;
-    left: 50%;
+    left: 20%;
     z-index:3;
 }
 .primary-navigation li {
@@ -326,6 +331,7 @@ footer p:hover{
 .content a{
     text-decoration:underline;
 }
+
 .rights-and-law-content{
     max-width:800px;
     height:auto;
@@ -628,7 +634,7 @@ footer p:hover{
 
 @media(min-width:1300px) {
     .primary-navigation{
-        left:75%;
+        left:30%;
     }
 
 }
