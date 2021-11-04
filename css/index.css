@@ -160,6 +160,10 @@ p{
     position:relative;
     z-index:3;
 }
+/* .news-container h2{
+    position:relative !important;
+    left: 42.5%;
+} */
 .news{
     width:200px;
     height:245px;
@@ -411,6 +415,9 @@ p{
         margin:4rem 0;
         flex-direction:column;
         align-items:center;
+    }
+    .news-container h1{
+    left: 0;
     }
     .backChevron,.forwardChevron{
         display:none;

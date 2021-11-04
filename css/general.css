@@ -232,7 +232,7 @@ nav{
     padding:0;
     position: relative;
     top: 0;
-    left: 0%;
+    left: -2rem;
     z-index:3;
 }
 .secondary-navigation li {
