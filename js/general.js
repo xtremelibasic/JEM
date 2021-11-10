@@ -1,5 +1,5 @@
 function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,es,ar,yo,fr,pt,sl'}, 'google_translate_element');
+    new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,es,ar,yo,fr,pt,so'}, 'google_translate_element');
 }
 
 let primaryNavigation = document.getElementById("primary-navigation")
