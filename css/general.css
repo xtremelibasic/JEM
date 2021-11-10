@@ -662,6 +662,14 @@ footer p:hover{
 }
 
 @media screen and (max-width:69rem){
+    .goog-te-gadget .goog-te-combo {
+        width:145px;
+        height:16px;
+        font-size:0.7rem;
+        position:relative;
+        top:50px;
+        left:-15vw;
+    }
     h3{
         font-size:1.5rem;
     }
