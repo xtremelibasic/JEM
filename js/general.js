@@ -3,49 +3,7 @@ function googleTranslateElementInit() {
 }
 
 let primaryNavigation = document.getElementById("primary-navigation")
-window.addEventListener("load", () => {
-     let circle1 = document.querySelector(".design-circle1");
-     let circle2 = document.querySelector(".design-circle2");
-     let square1 = document.querySelector(".design-square1");
-     let square2 = document.querySelector(".design-square2");
-     let homepage = document.querySelector(".homepage");
-     let primaryNavigation = document.getElementById("primary-navigation");
-     console.log(primaryNavigation)
-     let translateElement = document.getElementById("google_translate_element");
-    translateElement.style.position = "absolute";
-     translateElement.style.top = "5.5vw";
-     translateElement.style.left = "17vw";
-     translateElement.style.zIndex = "100";
-    if(translateElement.innerHTML === ""){
-        primaryNavigation.top = "-6.25vw";
-        primaryNavigation.left = "13vw"
-        circle1.style.top = "32.8vw"; 
-        circle1.style.left = "-6.25vw";
-        circle2.style.top = "32.8vw";
-        circle2.style.left = "54.1vw";
-        square1.style.top = "0";
-        square1.style.left = "50vw";
-        square2.style.top = "66.4vw";
-        square2.style.left = "50vw";
-        square2.style.height = "43vw";
-        homepage.style.left = "0vw";
-    } else {
-        // primaryNavigation.top = "-20vw";
-        // primaryNavigation.left = "40vw !important";
-        circle1.style.top = "34vw"; 
-        circle1.style.left = "-16vw";
-        circle2.style.top = "34vw"
-        circle2.style.left = "45vw";
-        // square1.style.top = "5vw";
-        square1.style.left = "41vw";
-        square2.style.top = "66vw"
-        square2.style.left = "41vw";
-        square2.style.height = "50vw";
-        homepage.style.top = "2vw";
-        homepage.style.left = "-9vw";
-    }
-    
-})
+
 
 //The hamburger menu function
  let hamburgerMenu = document.getElementById("hamburger-menu");
