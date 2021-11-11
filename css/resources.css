@@ -13,7 +13,7 @@
 /* Resources page */
 .resources-content-Container{
     position:relative;
-    top:-280px;
+    top:-200px;
     left:15%;
 }
 .events-content-Container{
@@ -21,7 +21,7 @@
     flex-direction: column;
     align-items: center;
     position:relative;
-    top:-280px;
+    top:-200px;
     left:15%;
 }
 .articles-content-Container{

@@ -1,7 +1,10 @@
+h1,h2{
+    text-align: left;
+}
 .about-us-container, .our-services{
     width:75%;
     position:relative;
-    top:-180px;
+    top:-200px;
     left:24%;
 }
 .our-services-details{
