@@ -212,7 +212,7 @@
 } */
 .news{
     /* width:200px; */
-    width:15.6vw;
+    width:18vw;
     /* height:245px; */
     height:19vw;
     text-align:center;
@@ -305,7 +305,7 @@
 }
 .question{
     width:85%;
-    min-width:1000px;
+    min-width:300px;
     height:auto;
     padding:0 1rem;
     background-color:var(--primaryColour);
@@ -362,7 +362,7 @@
         width:100vw;
         height:100vh;
         padding:0rem 0;
-        top:5rem;
+        top:10rem;
         right:0;
     }
     .intro{
@@ -407,7 +407,7 @@
     }
     
     .news{
-        width:200px;
+        width:230px;
         height:245px;
         padding:1rem;
     }
@@ -429,7 +429,7 @@
     }
     .question{
         width:90%;
-        margin:.3rem auto;
+        margin:.3rem 0;
     }
     /*Footer*/
     footer{
@@ -470,8 +470,8 @@
     .intro{
         /* width:50vw; */
         height:auto;
-        left:-70px;
-        top:40vw;
+        left:0px;
+        top:39vw;
         width:75%;
         padding-left:0vw;
     }
@@ -544,8 +544,8 @@
         margin-top:5rem;
     }
     .intro h1{
-        left:30%;
-        width:100%;
+        left:80%;
+        width:100vw;
         top:-5vw;
     }
      .homepage p:last-child{

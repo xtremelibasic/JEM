@@ -71,6 +71,7 @@ body {
 /*General*/
 h1,h2,h3,h4{
        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+       text-align: center;
 }
 h1{
     font-size:3vw;
@@ -560,9 +561,12 @@ footer p:hover{
         left:4vw !important; 
     }
 }
-/* @media only screen and (max-width: 800px) and (min-width: 751px)  {
-   
-} */
+@media screen and (max-width:800px){
+   .goog-te-gadget .goog-te-combo{
+        top:150px !important;
+        left:-8vw !important;
+   }
+}
 
 @media screen and (max-width:50rem){
     .logo{
@@ -667,7 +671,7 @@ footer p:hover{
         height:16px;
         font-size:0.7rem;
         position:relative;
-        top:50px;
+        top:5.5vw;
         left:-15vw;
     }
     h3{
