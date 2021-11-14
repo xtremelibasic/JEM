@@ -46,6 +46,7 @@
     width:9.5vw;
     height:1.3vw;
     font-size:1vw;
+    background-color: #ffffff;
 }
 
 html{
@@ -536,8 +537,11 @@ footer p:hover{
 /*Media Queries*/
 
 @media screen and (max-width:600px){
-    .secondary-navigation, .goog-te-gadget > .goog-te-combo{
+    .secondary-navigation{
         left:25vw !important; 
+    }
+    .goog-te-gadget, .goog-te-combo{
+        left:35vw !important; 
     }
 }
 @media screen and (max-width:500px){
@@ -556,10 +560,19 @@ footer p:hover{
     .secondary-navigation{
         left:20vw !important; 
     }
+    .goog-te-gadget, .goog-te-combo{
+        left:20vw !important; 
+    }
 }
 @media screen and (max-width:400px) {
     .secondary-navigation{
         left:10vw !important; 
+    }
+    .goog-te-gadget, .goog-te-combo{
+        left:23vw !important; 
+    }
+    .scrollbar{
+        width:.3rem;
     }
 }
 @media screen and (max-width:350px) {
@@ -569,8 +582,9 @@ footer p:hover{
 }
 @media screen and (max-width:800px){
    .goog-te-gadget .goog-te-combo{
-        top:150px !important;
-        left:-8vw !important;
+        /* top:150px !important;
+        left:-8vw !important; */
+        top:-50px;
    }
 }
 
@@ -677,8 +691,9 @@ footer p:hover{
         height:16px;
         font-size:0.7rem;
         position:relative;
-        top:5.5vw;
-        left:-15vw;
+        /* top:5.5vw;
+        left:-15vw; */
+        left:4.5vw;
     }
     h3{
         font-size:1.5rem;
@@ -700,7 +715,7 @@ footer p:hover{
     .secondary-navigation{
         width:100%;
         top:-60px;
-        left:5%;
+        left:1vw;
         align-items:flex-start;
         margin-top:3rem;
         margin-bottom:2rem;
@@ -737,6 +752,9 @@ footer p:hover{
     .miscellaneous p{
         line-height: 1rem;
         font-size: 1rem;
+    }
+    .design-square1{
+        display:none;
     }
 }
 

@@ -59,4 +59,7 @@
     .question{
         margin:1rem 2rem;
     }
+    .design-square1{
+        display:none;
+    }
 }
