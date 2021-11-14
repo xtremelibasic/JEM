@@ -2,11 +2,16 @@ window.addEventListener("load", () => {
     let translateElement = document.getElementById("google_translate_element");
     let designSquare = document.querySelector(".design-square1");
      if(translateElement.innerHTML === ""){
+         designSquare.style.height = "145vw";
+         designSquare.style.maxHeight = "145vw";
+         designSquare.style.minHeight = "145vw";
          designSquare.style.left ="50vw";
          designSquare.style.height = "200vw"
          designSquare.style.transform = "translate(-50%, 0)";
      } else {
-         designSquare.style.height = "200vw"
+         designSquare.style.height = "145vw";
+         designSquare.style.maxHeight = "145vw";
+         designSquare.style.minHeight = "145vw";
         designSquare.style.transform = "translate(-59%, 0)";
      }
 })

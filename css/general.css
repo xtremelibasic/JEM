@@ -339,6 +339,7 @@ footer p:hover{
 .modal-heading{
     color:#ffffff;
     margin:.5rem;
+    text-align: center;
 }
 .modal{
     /* padding:2rem 0; */
