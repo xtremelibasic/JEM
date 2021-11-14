@@ -1,4 +1,5 @@
-h1,h2{
+h1,
+h2 {
     text-align: left;
 }
 .design-square1 {
@@ -20,97 +21,97 @@ h1,h2{
     z-index: -1;
 }
 
-.about-us-container, .our-services{
-    width:75%;
-    position:relative;
-    top:-200px;
-    left:24%;
+.about-us-container,
+.our-services {
+    width: 75%;
+    position: relative;
+    top: -200px;
+    left: 24%;
 }
-.our-services-details{
-    margin:3rem 0;
-    width:auto;
+.our-services-details {
+    margin: 3rem 0;
+    width: auto;
 }
-.our-services-details ul{
-    display:flex;
-    gap:15rem;
+.our-services-details ul {
+    display: flex;
+    gap: 15rem;
     justify-content: center;
-    margin-right:3rem;
-    font-weight:bold;
-    cursor:default;
+    margin-right: 3rem;
+    font-weight: bold;
+    cursor: default;
 }
-.our-services-details ul li{
-    min-width:8.5rem;
-    text-align:center;
+.our-services-details ul li {
+    min-width: 8.5rem;
+    text-align: center;
 }
-.service-container{
-    margin-bottom:3rem;
+.service-container {
+    margin-bottom: 3rem;
 }
 
-.service-container button{
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
+.service-container button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-.price{
-    display:grid;
+.price {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap:5rem;
+    gap: 5rem;
 }
-.disclaimer{
-    margin:3rem 0;
+.disclaimer {
+    margin: 3rem 0;
 }
-.team-member{
-    display:flex;
-    align-items:center;
+.team-member {
+    display: flex;
+    align-items: center;
 }
-.profile-pic{
-    border-radius:75px;
-    width:150px;
-    height:150px;
-    margin-right:2rem;
+.profile-pic {
+    border-radius: 75px;
+    width: 150px;
+    height: 150px;
+    margin-right: 2rem;
 }
-.float{
-    display:none;
-    float:left;
+.float {
+    display: none;
+    float: left;
 }
-.collaborations a:hover{
-    text-decoration:underline;
+.collaborations a:hover {
+    text-decoration: underline;
 }
-@media screen and (max-width:1100px){
-    .about-us-container, .our-services{
-        position:relative;
-        top:-50px;
-        left:11%;
+@media screen and(max-width:1100px) {
+    .about-us-container,
+    .our-services {
+        position: relative;
+        top: -50px;
+        left: 11%;
     }
-    .our-services-details ul{
-        justify-content:flex-start;
-        padding:0;
-        gap:10%;
-        margin:0;
+    .our-services-details ul {
+        justify-content: flex-start;
+        padding: 0;
+        gap: 10%;
+        margin: 0;
     }
-    .design-square1{
-        display:none;
+
+}
+@media screen and(max-width:750px) {
+    .team-member {
+        margin-top: 4rem;
+    }
+    .no-float {
+        display: none;
+    }
+    .float {
+        display: inline-block;
+    }
+    .price {
+        grid-template-columns: 2.5fr 1fr;
+        gap: 2rem;
     }
 }
-@media screen and (max-width:750px){
-    .team-member{
-        margin-top:4rem;
-    }
-    .no-float{
-        display:none;
-    }
-    .float{
-        display:inline-block;
-    }
-    .price{
-        grid-template-columns:2.5fr 1fr;
-        gap:2rem;
-    }
-}
-@media screen and (min-width:1600px){
-    .design-square1{
-        min-height:230vw;
-        max-height:230vw;
-        height:230vw;
+@media screen and(min-width:1600px) {
+    .design-square1 {
+        min-height: 230vw;
+        max-height: 230vw;
+        height: 230vw;
     }
 }
