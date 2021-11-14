@@ -1,3 +1,16 @@
+window.addEventListener("load", () => {
+    let translateElement = document.getElementById("google_translate_element");
+    let designSquare = document.querySelector(".design-square1");
+     if(translateElement.innerHTML === ""){
+         designSquare.style.left ="50vw";
+         designSquare.style.height = "200vw"
+         designSquare.style.transform = "translate(-50%, 0)";
+     } else {
+         designSquare.style.height = "200vw"
+        designSquare.style.transform = "translate(-59%, 0)";
+     }
+})
+
 let ourServices = document.getElementById("our-services");
 let pricing = document.getElementById("pricing");
 let servicesContent = document.getElementById("services-content");
@@ -29,7 +42,7 @@ let servicesContent = document.getElementById("services-content");
 //     }
 // }
 
-function createContactUsModal(serviceName){
+function createContactUsModal(){
     if(modal.offsetHeight < 10){
         modal.innerHTML = "";   
         let closeBtn = document.createElement("div");
@@ -108,7 +121,6 @@ function createContactUsModal(serviceName){
         contactForm.append(breakTag4)
 
         let messageTextArea = document.createElement("textarea")
-        messageTextArea.value = `I would like to oder the ${serviceName}.`;
         messageTextArea.setAttribute("id", "messageTextArea");
         messageTextArea.setAttribute("name", "messageTextArea")
         contactForm.append(messageTextArea)
@@ -166,7 +178,7 @@ window.onload = () => {
     // requestServiceBtn2.onclick = createContactUsModal("Advocacy");
     requestServiceBtn2.addEventListener("click", () => {
         console.log("clicked")
-        createContactUsModal("Advocacy");
+        createContactUsModal();
     })
    requestServiceBtn2.setAttribute("id", "onload-request-Advocacy-btn")
     requestServiceBtn2.setAttribute("type", "button");
@@ -193,14 +205,14 @@ window.onload = () => {
     let service4Container = document.createElement("div");
     service4Container.classList.add("service-container")
     let service4Title = document.createElement("h1");
-    service4Title.innerHTML = "Parent forums";
+    service4Title.innerHTML = "Parent Forums";
     service4Container.append(service4Title);
     let service4Summary = document.createElement("p");
     service4Summary.innerHTML = "We regularly run forums for parents and community groups on topics they want to explore.  Our forums give participants the chance to talk about their concerns, share knowledge and experiences.  They encourage participants to knowledge share and bring people together, so they know they are not alone.";
     service4Container.append(service4Summary);
     let requestServiceBtn4 = document.createElement("button");
     requestServiceBtn4.addEventListener("click", () => {
-        createContactUsModal("Forum");
+        createContactUsModal();
     })
     requestServiceBtn4.setAttribute("type", "button");
     requestServiceBtn4.classList.add("btn");
@@ -247,7 +259,7 @@ ourServices.addEventListener("click", () => {
     service2Container.append(service2Summary);
     let requestServiceBtn2 = document.createElement("button");
     requestServiceBtn2.addEventListener("click", () => {
-        createContactUsModal("Advocacy");
+        createContactUsModal();
     })
     requestServiceBtn2.setAttribute("type", "button");
     requestServiceBtn2.classList.add("btn");

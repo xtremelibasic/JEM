@@ -252,7 +252,6 @@ events.map(event => {
 
         let messageTextArea = document.createElement("textarea");
         messageTextArea.setAttribute("required", "");
-        messageTextArea.value = "I want to register for the " + event.children.item(1).innerHTML + " event";
         messageTextArea.setAttribute("id", "messageTextArea");
         messageTextArea.setAttribute("name", "messageTextArea")
         contactForm.append(messageTextArea)
@@ -395,7 +394,7 @@ contactUsBtn.addEventListener("click", ()=>{
         addressIcon.alt = "location icon";
         let addressContent = document.createElement("p");
         addressContent.classList.add("addressContent");
-        addressContent.innerHTML = "Just Education Matters CIC,<br>Kemp House,<br> 152-160 City Road,<br>London EC1V 2NX<br>&nbsp;<br>Telephone: 07936 449 834<br>&nbsp;<br>Email: info@justeducationmatters.org<br>Web: www.justeducationmatters.org";
+        addressContent.innerHTML = "Just Education Matters CIC,<br>Kemp House,<br> 152-160 City Road,<br>London EC1V 2NX<br>Telephone: 07936 449 834<br>Email: info@justeducationmatters.org<br>Web: www.justeducationmatters.org";
         addressDiv.append(addressContent);
         addressDiv.append(addressIcon);
         modal.append(addressDiv);
@@ -449,55 +448,55 @@ yourRightsAndTheLawBtn.addEventListener("click", () => {
         educationSection.append(link2)
 
         let link3 = document.createElement("a");
-        link3.innerHTML = "the Education Act 2002, as amended by the Education Act 2011 <br>";
+        link3.innerHTML = "The Education Act 2002, as Amended by the Education Act 2011 <br>";
         link3.href = "https://www.legislation.gov.uk/ukpga/2002/32/contents";
         link3.setAttribute("target","_blank");
         educationSection.append(link3)
 
         let link4 = document.createElement("a");
-        link4.innerHTML = "the School Discipline (Pupil Exclusions and Reviews) (England) Regulations 2012 <br>";
+        link4.innerHTML = "The School Discipline (Pupil Exclusions and Reviews) (England) Regulations 2012 <br>";
         link4.href = "https://www.legislation.gov.uk/uksi/2012/1033/contents#:~:text=The%20School%20Discipline%20%28Pupil%20Exclusions%20and%20Reviews%29%20%28England%29,be%20brought%20into%20force%20at%20a%20future%20date.";
         link4.setAttribute("target","_blank");
         educationSection.append(link4)
          
         let link5 = document.createElement("a");
-        link5.innerHTML = "the Education and Inspections Act 2006 <br>";
+        link5.innerHTML = "The Education and Inspections Act 2006 <br>";
         link5.href = "https://www.legislation.gov.uk/ukpga/2006/40/contents";
         link5.setAttribute("target","_blank");
         educationSection.append(link5)
 
         let link6 = document.createElement("a");
-        link6.innerHTML = "the Education Act 1996 <br>";
+        link6.innerHTML = "The Education Act 1996 <br>";
         link6.href = "https://www.legislation.gov.uk/ukpga/1996/56/contents";
         link6.setAttribute("target","_blank");
         educationSection.append(link6)
 
         let link7 = document.createElement("a");
-        link7.innerHTML = "the Education (Provision of Full-Time Education for Excluded Pupils) (England) <br>";
+        link7.innerHTML = "The Education (Provision of Full-Time Education for Excluded Pupils) (England) <br>";
         link7.href = "https://www.legislation.gov.uk/uksi/2007/1870/made";
         link7.setAttribute("target","_blank");
         educationSection.append(link7)
 
         let link8 = document.createElement("a");
-        link8.innerHTML = "Regulations 2007, as amended by the Education (Provision of Full-Time Education for Excluded Pupils) (England) (Amendment) Regulations 2014 <br>";
+        link8.innerHTML = "Regulations 2007, as Amended by the Education (Provision of Full-Time Education for Excluded Pupils) (England) (Amendment) Regulations 2014 <br>";
         link8.href = "https://www.legislation.gov.uk/uksi/2007/1870/made";
         link8.setAttribute("target","_blank");
         educationSection.append(link8)
 
         let link9 = document.createElement("a");
-        link9.innerHTML = "Department for Education (DfE) – Exclusion from maintained schools, academies and pupil referral units (PRUs) in England September 2017 <br>";
+        link9.innerHTML = "Department for Education (DfE) – Exclusion from Maintained Schools, Academies and Pupil Referral Units (PRUs) in England September 2017 <br>";
         link9.href = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/921405/20170831_Exclusion_Stat_guidance_Web_version.pdf";
         link9.setAttribute("target","_blank");
         educationSection.append(link9)
 
         let link10 = document.createElement("a");
-        link10.innerHTML = "Changes to the school exclusions process during the coronavirus outbreak <br>";
+        link10.innerHTML = "Changes to the School Exclusions Process During the Coronavirus Outbreak <br>";
         link10.href = "https://www.gov.uk/government/publications/school-exclusion/changes-to-the-school-exclusion-process-during-the-coronavirus-outbreak";
         link10.setAttribute("target","_blank");
         educationSection.append(link10)
 
         let link11 = document.createElement("a");
-        link11.innerHTML = "Keeping children safe in education: statutory guidance for schools and colleges 2021 <br>";
+        link11.innerHTML = "Keeping Children Safe in Education: Statutory Guidance for Schools and Colleges 2021 <br>";
         link11.href = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1021914/KCSIE_2021_September_guidance.pdf";
         link11.setAttribute("target","_blank");
         educationSection.append(link11)
@@ -511,22 +510,23 @@ yourRightsAndTheLawBtn.addEventListener("click", () => {
 
         
         let link12 = document.createElement("a");
-        link12.innerHTML = "School Admissions Code Mandatory requirements and statutory guidance for admission authorities, governing bodies, local authorities, schools adjudicators and admission appeals panels September 2021";
+        link12.innerHTML = "School Admissions Code Mandatory Requirements and Statutory Guidance for Admission Authorities, Governing Bodies, Local Authorities, Schools Adjudicators and Admission Appeals Panels September 2021";
         link12.href = "https://drive.google.com/open?id=1DuOtjhBlhF07RcA8xwbsu0qgpQ3SFLWN";
         link12.setAttribute("target","_blank");
         admissionsSection.append(link12)
 
         let link13 = document.createElement("a");
-        link13.innerHTML = "School Admission Appeals Code Statutory guidance for school leaders, governing bodies and local authorities February 2012";
+        link13.innerHTML = "School Admission Appeals Code Statutory Guidance for School Leaders, Governing Bodies and Local Authorities February 2012";
         link13.href = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/275897/school_admission_appeals_code_1_february_2012.pdf";
         link13.setAttribute("target","_blank");
         admissionsSection.append(link13)
 
         let homeEducationSection = document.createElement("section");
+        homeEducationSection.style.width = "100%";
         modalContent.append(homeEducationSection)
 
         let homeEducationSectionTitle = document.createElement("h2");
-        homeEducationSectionTitle.innerHTML = "Home education";
+        homeEducationSectionTitle.innerHTML = "Home Education";
         homeEducationSection.append(homeEducationSectionTitle);
 
         let link14 = document.createElement("a");

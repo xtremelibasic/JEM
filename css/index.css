@@ -212,9 +212,9 @@
 } */
 .news{
     /* width:200px; */
-    width:18vw;
+    width:19vw;
     /* height:245px; */
-    height:19vw;
+    height:18.5vw;
     text-align:center;
     border:1px solid #46E4C1;
     /* padding:1rem; */
@@ -471,7 +471,7 @@
         /* width:50vw; */
         height:auto;
         left:0px;
-        top:39vw;
+        top:34vw;
         width:75%;
         padding-left:0vw;
     }

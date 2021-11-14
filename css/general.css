@@ -344,9 +344,10 @@ footer p:hover{
     /* padding:2rem 0; */
     width: 100vw;
     min-width:300px;
-    height:auto;
+    height:100vh;
     position:fixed;
     margin:auto;
+    padding-top:1.8rem;
     text-align: center;
     left:25%;
     background-color: rgb(0, 0, 0,0.9);
@@ -369,6 +370,7 @@ footer p:hover{
     height:auto;
     display:flex;
     flex-wrap:wrap;
+    padding-bottom:1rem;
     flex-direction: column;
     margin:auto;
     background-color:#ffffff;
@@ -386,7 +388,7 @@ footer p:hover{
     justify-content: center;
     align-items:flex-start;
     text-align:left;
-    padding:3rem 5rem  0rem;
+    padding:3rem 5rem 3rem  5rem;
     margin:auto;
     background-color:#ffffff;
     color:#000000;
@@ -460,7 +462,7 @@ footer p:hover{
     color:#ffffff;
     line-height:1.2rem;
     text-align:left;
-    font-size:1rem;
+    font-size:.9rem;
     margin:0;
 }
 
@@ -513,6 +515,9 @@ footer p:hover{
 .socialMediaLinks ul li{
     list-style-type: none !important;
 }
+.contact-us h3, .miscellaneous h3, .company-details h3{
+    text-align:left;
+}
 
 /*Scroll Design*/
 .scrollbar{
@@ -530,7 +535,7 @@ footer p:hover{
 /*Media Queries*/
 
 @media screen and (max-width:600px){
-    .secondary-navigation{
+    .secondary-navigation, .goog-te-gadget > .goog-te-combo{
         left:25vw !important; 
     }
 }
@@ -740,6 +745,15 @@ footer p:hover{
         box-sizing:border-box;
         padding: 0 10rem;
     } */
+     h3{
+        font-size:2rem;
+    }
+    h2{
+        font-size:3rem;
+    }
+    .btn{
+        font-size:1rem;
+    }
 }
 @media screen and (min-width:1500px){
 

@@ -1,6 +1,25 @@
 h1,h2{
     text-align: left;
 }
+.design-square1 {
+    /* width:90%; */
+    width: 90vw;
+    /* max-height:500px; */
+    max-height: 150vw;
+    /* min-height:500px; */
+    min-height: 150vw;
+    /* height:100%; */
+    height: 150vw;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 3px 17px 40px rgba(101, 0, 102, 0.6);
+    position: absolute;
+    top: 0;
+    /* left: 50%; */
+    left: 50vw;
+    transform: translate(-50%, 0);
+    z-index: -1;
+}
+
 .about-us-container, .our-services{
     width:75%;
     position:relative;
@@ -69,6 +88,9 @@ h1,h2{
         gap:10%;
         margin:0;
     }
+    .design-square1{
+        display:none;
+    }
 }
 @media screen and (max-width:750px){
     .team-member{
@@ -83,5 +105,12 @@ h1,h2{
     .price{
         grid-template-columns:2.5fr 1fr;
         gap:2rem;
+    }
+}
+@media screen and (min-width:1600px){
+    .design-square1{
+        min-height:230vw;
+        max-height:230vw;
+        height:230vw;
     }
 }
