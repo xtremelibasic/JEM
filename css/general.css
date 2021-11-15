@@ -196,6 +196,7 @@ header{
     width: 11.7vw;
     height: auto;
     position:relative;
+    top:-0.7vw;
     z-index:3;
 }
 .languageOptions{
@@ -255,7 +256,7 @@ nav{
     /* top: -80px; */
     top: -6.25vw;
     /* left: 20%; */
-    left: 13vw;
+    left: 16.7vw;
     z-index:3;
 }
 .primary-navigation li {
@@ -272,7 +273,7 @@ nav{
     position: relative;
     top: 0;
     /* left: -2rem; */
-    left:-2.5vw;
+    left:-2vw;
     z-index:3;
 }
 .secondary-navigation li {
@@ -541,11 +542,13 @@ footer p:hover{
         left:25vw !important; 
     }
     .goog-te-gadget, .goog-te-combo{
-        left:35vw !important; 
+        left:19vw !important; 
     }
 }
 @media screen and (max-width:500px){
-    
+    /* .goog-te-gadget .goog-te-combo {
+        top:30vw !important;
+    } */
     .content-contact-Us input, .content-contact-Us label, .content-contact-Us textarea{
         width:120%;
     }
@@ -569,7 +572,7 @@ footer p:hover{
         left:10vw !important; 
     }
     .goog-te-gadget, .goog-te-combo{
-        left:23vw !important; 
+        left:20vw !important; 
     }
     .scrollbar{
         width:.5rem;
@@ -584,11 +587,16 @@ footer p:hover{
    .goog-te-gadget .goog-te-combo{
         /* top:150px !important;
         left:-8vw !important; */
-        top:-50px;
+        /* top:-50px; */
+        top:15vw !important;
+        left:-8vw;
    }
 }
 
 @media screen and (max-width:50rem){
+    .goog-te-gadget .goog-te-combo {
+        top:120px !important;
+    }
     .logo{
         max-width: 220px;
         width: 150px;
@@ -683,6 +691,9 @@ footer p:hover{
     .contact-us p, .company-details p{
         text-align: center;
     }
+    .contact-us h3{
+        text-align:center;
+    }
 
 }
 
@@ -692,9 +703,9 @@ footer p:hover{
         height:16px;
         font-size:0.7rem;
         position:relative;
-        /* top:5.5vw;
-        left:-15vw; */
-        left:4.5vw;
+        top:5.5vw;
+        left:-13vw;
+        /* left:4.5vw; */
     }
     h3{
         font-size:1.5rem;

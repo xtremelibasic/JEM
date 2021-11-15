@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
      console.log(primaryNavigation)
      let translateElement = document.getElementById("google_translate_element");
     translateElement.style.position = "absolute";
-     translateElement.style.top = "5.5vw";
+     translateElement.style.top = "5.4vw";
      translateElement.style.left = "17vw";
      translateElement.style.zIndex = "100";
     if(translateElement.innerHTML === ""){

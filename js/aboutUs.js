@@ -1,6 +1,10 @@
 
 window.addEventListener("load", () => {
     let translateElement = document.getElementById("google_translate_element");
+    translateElement.style.position = "absolute";
+     translateElement.style.top = "5.4vw";
+     translateElement.style.left = "17vw";
+     translateElement.style.zIndex = "100";
     let designSquare = document.querySelector(".design-square1");
      if(translateElement.innerHTML === ""){
          designSquare.style.height = "230vw";
@@ -13,7 +17,7 @@ window.addEventListener("load", () => {
          designSquare.style.height = "238vw";
          designSquare.style.maxHeight = "238vw";
          designSquare.style.minHeight = "238vw";
-designSquare.style.transform = "translate(-61%, 0)";
+designSquare.style.transform = "translate(-60%, 0)";
      }
 })
 

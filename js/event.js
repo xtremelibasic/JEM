@@ -1,5 +1,9 @@
 window.addEventListener("load", () => {
     let translateElement = document.getElementById("google_translate_element");
+     translateElement.style.position = "absolute";
+     translateElement.style.top = "5.4vw";
+     translateElement.style.left = "17vw";
+     translateElement.style.zIndex = "100";
     let designSquare = document.querySelector(".design-square1");
      if(translateElement.innerHTML === ""){
          designSquare.style.left ="50vw";
