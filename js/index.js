@@ -36,7 +36,7 @@ window.addEventListener("load", () => {
         square2.style.top = "66vw"
         square2.style.left = "41vw";
         square2.style.height = "50vw";
-        homepage.style.top = "3vw";
+        homepage.style.top = "9vw";
         homepage.style.left = "-9vw";
     }
     

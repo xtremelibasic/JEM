@@ -14,9 +14,9 @@ window.addEventListener("load", () => {
          designSquare.style.left ="50vw";
          designSquare.style.transform = "translate(-50%, 0)";
      } else {
-         designSquare.style.height = "238vw";
-         designSquare.style.maxHeight = "238vw";
-         designSquare.style.minHeight = "238vw";
+         designSquare.style.height = "236vw";
+         designSquare.style.maxHeight = "236vw";
+         designSquare.style.minHeight = "236vw";
 designSquare.style.transform = "translate(-60%, 0)";
      }
 })
