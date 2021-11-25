@@ -85,8 +85,9 @@ h2{
 h3{
     font-size:2vw;
 }
+
 p,li{
-    font-family:"Segoe UI Regular";
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
     /* font-size:1rem; */
     font-size:1.25vw;
     /* line-height: 1.5rem; */
@@ -382,7 +383,10 @@ footer p:hover{
 .content a{
     text-decoration:underline;
 }
-
+#advice-form p{
+    font-size:1.4vw;
+    margin:.4vw 0;
+}
 .rights-and-law-content{
     max-width:800px;
     height:auto;
@@ -706,6 +710,9 @@ footer p:hover{
         top:5.5vw;
         left:-13vw;
         /* left:4.5vw; */
+    }
+    #advice-form p{
+        font-size:1rem;
     }
     h3{
         font-size:1.5rem;
