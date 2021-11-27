@@ -247,7 +247,7 @@ nav{
     min-width:48px;
     position: relative;
     top: -120px;
-    left: 81vw;
+    left: 88vw;
 }
 .primary-navigation {
     width: auto;
@@ -542,8 +542,11 @@ footer p:hover{
 /*Media Queries*/
 
 @media screen and (max-width:600px){
+    .hamburger-menu{
+        left:83vw;
+    }
     .secondary-navigation{
-        left:25vw !important; 
+        left:29vw !important; 
     }
     .goog-te-gadget, .goog-te-combo{
         left:19vw !important; 
@@ -565,7 +568,7 @@ footer p:hover{
         padding:1rem;
     }
     .secondary-navigation{
-        left:20vw !important; 
+        left:24.5vw !important; 
     }
     .goog-te-gadget, .goog-te-combo{
         left:20vw !important; 
@@ -582,10 +585,16 @@ footer p:hover{
         width:.5rem;
     }
 }
-@media screen and (max-width:350px) {
+@media screen and (max-width:420px) {
     .secondary-navigation{
-        left:4vw !important; 
+        left:20vw !important; 
     }
+}
+@media screen and (max-width:360px) {
+    .secondary-navigation{
+        left:15vw !important; 
+    }
+    
 }
 @media screen and (max-width:800px){
    .goog-te-gadget .goog-te-combo{
@@ -736,7 +745,6 @@ footer p:hover{
         top:-60px;
         left:1vw;
         align-items:flex-start;
-        margin-top:3rem;
         margin-bottom:2rem;
     }
     /*Modal*/

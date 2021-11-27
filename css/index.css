@@ -382,12 +382,16 @@ important-prompt*/
         right:0;
     }
     .intro{
-        width:100%;
-        left:1vw;
+        width:60vw;
+        left:15vw;
         top:4vh;
     }
+    #intro-heading{
+        width:60%;
+        left:-10vw;
+    }
     #intro-paragraph{
-    width:40%;
+    width:60%;
     /* padding:2rem !important;*/
     padding:2.5vw !important;
     }
@@ -458,14 +462,14 @@ important-prompt*/
 }
 @media screen and (max-width:800px) {
     .homepage{
+        width:65vw;
         top:23vw !important;
-        left:10vw !important;
     }
     #intro-paragraph{
         width:70%;
     }
     #intro-heading{
-        left: -6vw;
+        left: -12vw;
     }
     .intro{
         left:13.5vw;
@@ -510,11 +514,15 @@ important-prompt*/
         width:75%;
         padding-left:0vw;
     }
+    #intro-heading{
+        top:3vw;
+    }
     #intro-paragraph{
-       position:relative;
-       left:0;
-       padding:0;
-       margin:0;
+       position: relative;
+        left: 3vw;
+        margin: 0;
+        top: 3vw;
+        width: 60vw;
 
     }
     #important-prompt{
@@ -568,41 +576,56 @@ important-prompt*/
 }
 
 @media (max-width:600px){
+    .homepage{
+        min-height:0vw;
+    }
     .intro{
         /* width:50vw; */
-        height:0;
+        height:auto;
         /* left:-70px; */
-        left:-11.7vw;
-       top:34vw;
+        left:20vw;
+        top:10vw;
         width:70%;
-    
-        padding-left:0vw;
+        padding: 6rem 0vw;
         margin-top:5rem;
     }
-    .intro h1{
+    #intro-heading{
+        left:-1vw;
+        font-size:2rem;
+        padding:1rem 0;
+        width:60vw;
+    }
+    /* .intro h1{
         left:80%;
         width:100vw;
         top:-5vw;
-    }
+    } */
      /* .homepage p:last-child{
         left:40%;
      } */
      .call-to-action{
          /* top:120%; */
          margin-top:50vw;
-         padding:40vw 0;
      }
 }
+@media (max-width:500px){
+    .call-to-action{
+        padding:5rem 0;
+    }
+}
 @media (max-width:420px){
+    #intro-heading{
+        left:-7vw;
+    }
+}
+@media (max-height:360px){
     .intro{
-        top:70vw;
+        top:3vw !important;
     }
 }
 
-/* @media (min-width:600px)and(max-width:750px){
-    .intro{
-        position:relative;
-    }
+/* @media (min-width:600px) and (max-width:750px){
+   
 }​ */
 
 @media (min-width:1300px){
