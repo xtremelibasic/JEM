@@ -455,6 +455,7 @@ footer p:hover{
     border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 }
 
+
 /*Address Section of the contact page*/
 .addressDiv{
     display:flex;
@@ -505,6 +506,9 @@ footer p:hover{
 .contact-us p, .company-details p{
     line-height: 2vw;
     color:#000000;
+}
+.socials a{
+    padding-left:0;
 }
 /*Support Us*/
 .supportUsDivs{
