@@ -383,9 +383,13 @@ footer p:hover{
 .content a{
     text-decoration:underline;
 }
-#advice-form p{
-    font-size:1.4vw;
+#advice-form p, #advice-form label{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    font-size:1rem;
     margin:.4vw 0;
+}
+#advice-form h3{
+    text-align:left;
 }
 .rights-and-law-content{
     max-width:800px;
