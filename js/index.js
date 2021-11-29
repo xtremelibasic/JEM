@@ -22,8 +22,9 @@ window.addEventListener("load", () => {
         square1.style.left = "50vw";
         square2.style.top = "66.4vw";
         square2.style.left = "50vw";
-        square2.style.height = "43vw";
+        square2.style.height = "40vw";
         homepage.style.left = "0vw";
+        homepage.style.top = "8vw";
     } else {
         // primaryNavigation.top = "-20vw";
         // primaryNavigation.left = "40vw !important";
@@ -35,7 +36,7 @@ window.addEventListener("load", () => {
         square1.style.left = "41vw";
         square2.style.top = "66vw"
         square2.style.left = "41vw";
-        square2.style.height = "50vw";
+        square2.style.height = "21vw";
         homepage.style.top = "9vw";
         homepage.style.left = "-9vw";
     }
