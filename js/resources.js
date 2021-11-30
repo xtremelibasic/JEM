@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
          designSquare.style.height = "385vw"
          designSquare.style.transform = "translate(-50%, 0)";
      } else {
-         designSquare.style.height = "385vw"
+         designSquare.style.height = "385vw";
         designSquare.style.transform = "translate(-60%, 0)";
      }
 })

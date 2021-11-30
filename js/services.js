@@ -6,16 +6,16 @@ window.addEventListener("load", () => {
      translateElement.style.zIndex = "100";
     let designSquare = document.querySelector(".design-square1");
      if(translateElement.innerHTML === ""){
-         designSquare.style.height = "145vw";
-         designSquare.style.maxHeight = "145vw";
-         designSquare.style.minHeight = "145vw";
+         designSquare.style.height = "115vw";
+         designSquare.style.maxHeight = "115vw";
+         designSquare.style.minHeight = "115vw";
          designSquare.style.left ="50vw";
          designSquare.style.height = "200vw"
          designSquare.style.transform = "translate(-50%, 0)";
      } else {
-         designSquare.style.height = "140vw";
-         designSquare.style.maxHeight = "140vw";
-         designSquare.style.minHeight = "140vw";
+         designSquare.style.height = "115vw";
+         designSquare.style.maxHeight = "115vw";
+         designSquare.style.minHeight = "115vw";
         designSquare.style.transform = "translate(-60%, 0)";
      }
 })
@@ -23,7 +23,39 @@ window.addEventListener("load", () => {
 let ourServices = document.getElementById("our-services");
 let pricing = document.getElementById("pricing");
 let servicesContent = document.getElementById("services-content");
+function createUnavailableModal(){
+    if(modal.offsetHeight < 10){
+        modal.innerHTML = "";   
+        let closeBtn = document.createElement("div");
+        closeBtn.innerHTML = "<i class='fas fa-times'></i>";
+        closeBtn.classList.add("close");
+        modal.prepend(closeBtn)
+        closeBtn.addEventListener("click", function(){
+            modal.classList.remove("show");
+        })
 
+        let modalContent = document.createElement("div");
+        modalContent.innerHTML = "<p>We are unable to offer this service at present due to lack of capacity. We can however offer initial one off advice and signpost you to other organisations offering these services.</p>"
+        modalContent.classList.add("content");
+        modal.append(modalContent)
+
+        modal.style.width = "30%";
+        modal.style.height = "60%";
+        modal.style.left = "50%";
+        modal.style.top = "50%";
+        modal.style.transform = "translate(-50%, -50%)";
+        modal.style.zIndex = "150";
+
+        
+        modalContent.style.padding = "0 1rem";
+        modalContent.style.position = "relative";
+        modalContent.style.top = "50%";
+        modalContent.style.transform = "translate(0, -50%)";
+        modalContent.style.marginLeft = "3%";
+
+        modal.classList.add("show")
+    }
+}
 // function createTrainingsModal(serviceName){
 //     if(modal.offsetHeight < 10){
 //         modal.innerHTML = "";   
@@ -187,7 +219,7 @@ window.onload = () => {
     // requestServiceBtn2.onclick = createContactUsModal("Advocacy");
     requestServiceBtn2.addEventListener("click", () => {
         console.log("clicked")
-        createContactUsModal();
+        createUnavailableModal();
     })
    requestServiceBtn2.setAttribute("id", "onload-request-Advocacy-btn")
     requestServiceBtn2.setAttribute("type", "button");
@@ -198,17 +230,17 @@ window.onload = () => {
     
     let service3Container = document.createElement("div");
     service3Container.classList.add("service-container")
-    let service3Title = document.createElement("h1");
-    service3Title.innerHTML = "Training";
-    service3Container.append(service3Title);
-    let service3Summary = document.createElement("p");
-    service3Summary.innerHTML = "We offer general and bespoke training on all exclusion and education related topics for community groups, governing bodies, schools, local authorities.  Our training is practical and interactive.  We don’t recite the law, we explain it. We have provided training on the exclusions process up to and including making representations to GBDC and IRPs, SEND law and appealing to SEND Tribunals, elective home education to name a few.";
-    service3Container.append(service3Summary);
-    let requestServiceBtn3 = document.createElement("button");
-    requestServiceBtn3.setAttribute("type", "button");
-    requestServiceBtn3.classList.add("btn");
-    requestServiceBtn3.innerHTML = "View Training videos"
-    service3Container.append(requestServiceBtn3)
+    // let service3Title = document.createElement("h1");
+    // service3Title.innerHTML = "Training";
+    // service3Container.append(service3Title);
+    // let service3Summary = document.createElement("p");
+    // service3Summary.innerHTML = "We offer general and bespoke training on all exclusion and education related topics for community groups, governing bodies, schools, local authorities.  Our training is practical and interactive.  We don’t recite the law, we explain it. We have provided training on the exclusions process up to and including making representations to GBDC and IRPs, SEND law and appealing to SEND Tribunals, elective home education to name a few.";
+    // service3Container.append(service3Summary);
+    // let requestServiceBtn3 = document.createElement("button");
+    // requestServiceBtn3.setAttribute("type", "button");
+    // requestServiceBtn3.classList.add("btn");
+    // requestServiceBtn3.innerHTML = "View Training videos"
+    // service3Container.append(requestServiceBtn3)
 
 
     let service4Container = document.createElement("div");
@@ -418,7 +450,7 @@ function createAdviceRequestForm(){
         questions.setAttribute("id", "advice-form");
         questions.setAttribute("action", "https://formsubmit.co/amandanwadukwe@gmail.com");
         questions.setAttribute("method", "POST");
-        questions.innerHTML = "<h3>Extent of Exclusion</h3><br><input required type='radio' id='fixed-term' name='type-of-exclusion' value='A fixed term'><label for='fixed-term'>The child has been excluded for a fixed term</label><br><input name='type-of-exclusion' type='radio' id='permanently' value='Permanently'><label for='permanently'>The child has been excluded Permanently</label><br>&nbsp;<br><input required name='letter-from-HT' type='radio' id='letter-from-HT' value='I have received a letter from the head teacher informing me of the exclusion and the reasons for it'><label for='letter-from-HT'>I have received a letter from the head teacher informing me of the exclusion and the reasons for it</label><br><input name='letter-from-HT' type='radio' id='no-letter-from-HT' value='I have not received a letter from the head teacher informing me of the exclusion and the reasons for it'><label for='no-letter-from-HT'>I have <b>not</b> received a letter from the head teacher informing me of the exclusion and the reasons for it</label><br>&nbsp;<br><label for='days-excluded-for'><b>Fixed term exclusion:</b></label><br>In the last <select><option name='exclusion-period'  id='school year' value='School year'>School Year</option><option required name='exclusion-period'  id='term' value='Term'>Term</option><option name='exclusion-period'  id='two-terms' value='Two terms'>Two terms</option></select> the child has been excluded for <input required type='number' min='0' id='days-excluded-for' name='days-excluded-for'> day(s).<br>&nbsp;<br><p><h3>Context of Exclusion</h3><br>What reason was given for the exclusion?</p><input required name='reason-for-exclusion' type='radio' id='one-off-serious-incident' value='One off serious incident'><label for='one-off-serious-incident'>One off serious incident</label>&nbsp;&nbsp;<input name='reason-for-exclusion' type='radio' id='persistent-disruptive-behaviour' value='Persistent disruptive behaviour '><label for='persistent-disruptive-behaviour'>Persistent disruptive behaviour </label><br><br></p><p>Do you intend to make representation at the Governors Disciplinary Review Meeting/independent review panel?</p><input required name='representation-at-GDR' type='radio' id='yes-to-representation' value='Yes I would like representation at the Governors Disciplinary Review Meeting/independent review panel'><label for='yes-to-representation'>Yes</label>&nbsp;<input name='representation-at-GDR' type='radio' id='no-to-representation' value='No I do not need representation at the Governors Disciplinary Review Meeting/independent review panel'><label for='no-to-representation'>No</label><br><br><p>What support would you want from us?</p><input name='support-needed' type='checkbox' id='advice' value='Advice'><label for='advice'>Advice</label>&nbsp;<input name='support-needed' type='checkbox' id='representation' value='Representation'><label for='representation'>Representation</label>&nbsp;<input name='support-needed' type='checkbox' id='other' value='Other'><label for='other'>Other</label><br><br><label for='other-support-needed'>Please tell us if you require any other support:</label><br><textarea type='text' name='Other-support-needed'></textarea><br><br><br><p><h3>About The Child</h3></p><br><label for='age-of-child'>How old is the child?</label>&nbsp;<input required type='number' min='0' max='16' name='age-of-child' id='age-of-child'><br><br><p> How is the child’s progress at school?</p><input required name='progress-at-school' type='radio' id='good' value='Good'><label for='good'>Good</label>&nbsp;<input name='progress-at-school' type='radio' id='not-so-good' value='Not so good'><label for='not-so-good'>Not so good</label>&nbsp;<input name='progress-at-school' type='radio' id='learning-difficulty' value='Difficulties with learning '><label for='learning-difficulty'>Difficulties with learning </label><br><br><label for='learning-difficulty-description'>If the child has any difficulty with their learning, please say briefly what these are</label><br><textarea type='text' name='learning-difficulty-description' id='learning-difficulty-description'></textarea><br><br><label for='previous-learning-support'>Tell us about any support that has been offered to the child to support their learning and being in school</label><br><textarea type='text' name='previous-learning-support' id='previous-learning-support'></textarea><br><br><p>Has the child been identified as needing additional support with their learning?</p><input required name='identified-as-needing-additional-support' type='radio' id='identified' value='Identifies as needing additional support'><label for='identified'>Yes</label>&nbsp;<input name='identified-as-needing-additional-support' type='radio' id='not-identified' value='Identifies as needing additional support'><label for='not-identified'>No</label><br><br><p>Does the child have an EHC plan?</p><input required name='has-ehcp' type='radio' id='has-ehcp' value='Has EHCP'><label for='has-ehcp'>Yes</label>&nbsp;<input name='has-ehcp' type='radio' id='no-ehcp' value='Does not have EHCP'><label for='no-ehcp'>No</label><br><br><br><p><h3>About The Child’s School</h3></p><br><p>What type of school does the child attend?</p><input required name='school-type' type='radio' id='academy' value='Academy'><label for='academy'>Academy</label>&nbsp;<input name='school-type' type='radio' id='lammm' value='Local authority maintained mainstream'><label for='lamm'>Local authority maintained mainstream</label>&nbsp;<input name='school-type' type='radio' id='special-school' value='Special school'><label for='special-school'>Special school</label>&nbsp;<input name='school-type' type='radio' id='independent-school' value='Independent School'><label for='independent-school'>Independent school</label><br><p>Are you aware of the school’s behaviour (and other) policies?</p><input required name='awareness-of-school-behaviour-policies' type='radio' id='aware' value='I am aware of the School's behaviour policies'><label for='aware'>Yes</label>&nbsp;<input name='awareness-of-school-behaviour-policies' type='radio' id='not-aware' value='No, I am not aware of the School's behaviour policies'><label for='not-aware'>No</label><br><br><label for='previous-contact-with-school'>Tell us what contact you have had with the school before this exclusion</label><br><textarea name='previous-contact-with-school' id='previous-contact-with-school'></textarea><br><br><label for='other-information'>Use this space to tell us anything more you think is important about your child’s situation</label><br><textarea id='other-information' name='other-information'></textarea><br><br><br><br><p>Contact Details</p><br><label for='client-name'>Your name:</label>&nbsp;&nbsp;<input required type='text' name='client-name' id='client-name'><br><br><label for='mobile-number'>Phone:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='tel' name='mobile-number' id='mobile-number'><br><br><label for='email'>Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input required type='email' name='email' id='email'><br><br><br><button type='submit' class='btn'>Submit Form</button>";
+        questions.innerHTML = "<h3>Extent of Exclusion</h3><br><input required type='radio' id='fixed-term' name='type-of-exclusion' value='A fixed term'><label for='fixed-term'>The child has been excluded for a fixed term</label><br><input name='type-of-exclusion' type='radio' id='permanently' value='Permanently'><label for='permanently'>The child has been excluded Permanently</label><br>&nbsp;<br><input required name='letter-from-HT' type='radio' id='letter-from-HT' value='I have received a letter from the head teacher informing me of the exclusion and the reasons for it'><label for='letter-from-HT'>I have received a letter from the head teacher informing me of the exclusion and the reasons for it</label><br><input name='letter-from-HT' type='radio' id='no-letter-from-HT' value='I have not received a letter from the head teacher informing me of the exclusion and the reasons for it'><label for='no-letter-from-HT'>I have <b>not</b> received a letter from the head teacher informing me of the exclusion and the reasons for it</label><br>&nbsp;<br><label for='days-excluded-for'><b>Fixed term exclusion:</b></label><br>In the last <select><option name='exclusion-period'  id='school year' value='School year'>School Year</option><option required name='exclusion-period'  id='term' value='Term'>Term</option><option name='exclusion-period'  id='two-terms' value='Two terms'>Two terms</option></select> the child has been excluded for <input required type='number' min='0' id='days-excluded-for' name='days-excluded-for'> day(s).<br>&nbsp;<br><p><h3>Context of Exclusion</h3><br>What reason was given for the exclusion?</p><input required name='reason-for-exclusion' type='radio' id='one-off-serious-incident' value='One off serious incident'><label for='one-off-serious-incident'>One off serious incident</label>&nbsp;&nbsp;<input name='reason-for-exclusion' type='radio' id='persistent-disruptive-behaviour' value='Persistent disruptive behaviour '><label for='persistent-disruptive-behaviour'>Persistent disruptive behaviour </label><br><br></p><p>Do you intend to make representation at the Governors Disciplinary Review Meeting/independent review panel?</p><input required name='representation-at-GDR' type='radio' id='yes-to-representation' value='Yes I would like representation at the Governors Disciplinary Review Meeting/independent review panel'><label for='yes-to-representation'>Yes</label>&nbsp;<input name='representation-at-GDR' type='radio' id='no-to-representation' value='No I do not need representation at the Governors Disciplinary Review Meeting/independent review panel'><label for='no-to-representation'>No</label><br><br><p>What support would you want from us?</p><input name='support-needed' type='checkbox' id='advice' value='Advice'><label for='advice'>Advice</label>&nbsp;<input name='support-needed' type='checkbox' id='representation' value='Representation'><label for='representation'>Representation</label>&nbsp;<input name='support-needed' type='checkbox' id='other' value='Other'><label for='other'>Other</label><br><br><label for='other-support-needed'>Please tell us if you require any other support:</label><br><textarea type='text' name='Other-support-needed'></textarea><br><br><br><p><h3>About The Child</h3></p><br><label for='age-of-child'>How old is the child?</label>&nbsp;<input required type='number' min='0' max='16' name='age-of-child' id='age-of-child'><br><br><p> How is the child’s progress at school?</p><input required name='progress-at-school' type='radio' id='good' value='Good'><label for='good'>Good</label>&nbsp;<input name='progress-at-school' type='radio' id='not-so-good' value='Not so good'><label for='not-so-good'>Not so good</label>&nbsp;<input name='progress-at-school' type='radio' id='learning-difficulty' value='Difficulties with learning '><label for='learning-difficulty'>Difficulties with learning </label><br><br><label for='learning-difficulty-description'>If the child has any difficulty with their learning, please say briefly what these are</label><br><textarea type='text' name='learning-difficulty-description' id='learning-difficulty-description'></textarea><br><br><label for='previous-learning-support'>Tell us about any support that has been offered to the child to support their learning and being in school</label><br><textarea type='text' name='previous-learning-support' id='previous-learning-support'></textarea><br><br><p>Has the child been identified as needing additional support with their learning?</p><input required name='identified-as-needing-additional-support' type='radio' id='identified' value='Identifies as needing additional support'><label for='identified'>Yes</label>&nbsp;<input name='identified-as-needing-additional-support' type='radio' id='not-identified' value='Identifies as needing additional support'><label for='not-identified'>No</label><br><br><p>Does the child have an EHC plan?</p><input required name='has-ehcp' type='radio' id='has-ehcp' value='Has EHCP'><label for='has-ehcp'>Yes</label>&nbsp;<input name='has-ehcp' type='radio' id='no-ehcp' value='Does not have EHCP'><label for='no-ehcp'>No</label><br><br><br><p><h3>About The Child’s School</h3></p><br><p>What type of school does the child attend?</p><input required name='school-type' type='radio' id='academy' value='Academy'><label for='academy'>Academy</label>&nbsp;<input name='school-type' type='radio' id='lammm' value='Local authority maintained mainstream'><label for='lamm'>Local authority maintained mainstream</label>&nbsp;<input name='school-type' type='radio' id='special-school' value='Special school'><label for='special-school'>Special school</label>&nbsp;<input name='school-type' type='radio' id='independent-school' value='Independent School'><label for='independent-school'>Independent school</label><br><p>Are you aware of the school’s behaviour (and other) policies?</p><input required name='awareness-of-school-behaviour-policies' type='radio' id='aware' value='I am aware of the School's behaviour policies'><label for='aware'>Yes</label>&nbsp;<input name='awareness-of-school-behaviour-policies' type='radio' id='not-aware' value='No, I am not aware of the School's behaviour policies'><label for='not-aware'>No</label><br><br><label for='previous-contact-with-school'>Tell us what contact you have had with the school before this exclusion</label><br><textarea name='previous-contact-with-school' id='previous-contact-with-school'></textarea><br><br><label for='other-information'>Use this space to tell us anything more you think is important about your child’s situation</label><br><textarea id='other-information' name='other-information'></textarea><br><br><br><br><p>Contact Details</p><br><label for='client-name'>Your name</label>&nbsp;&nbsp;<input required type='text' name='client-name' id='client-name'><br><br><label for='mobile-number'>Phone</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='tel' name='mobile-number' id='mobile-number'><br><br><label for='email'>Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input required type='email' name='email' id='email'><br><br><br><button type='submit' class='btn'>Submit Form</button>";
         adviceFormContent.append(questions);
 
         let textAreas = Array.from(document.querySelectorAll("textarea"));
