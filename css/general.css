@@ -32,6 +32,7 @@
     font-weight: normal;
     src: local('Segoe UI Bold Italic'), url('fonts/Segoe UI Bold Italic.woff') format('woff');
 }
+
 .goog-logo-link {
     display:none !important;
 } 
@@ -436,7 +437,21 @@ footer p:hover{
     font-weight: bold;
 }
 
-
+#credit{
+    position:absolute;
+    display: flex;
+    gap:.5rem;
+    bottom:1.5vw;
+}
+#credit img{
+    height:50px;
+    width:50px;
+    border-radius:50%;
+}
+#credit h1{
+    font-size:1rem;
+    color:#000;
+}
 
 .content-contact-Us input{
     width:210%;

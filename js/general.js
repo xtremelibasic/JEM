@@ -1,17 +1,17 @@
 
-
 let primaryNavigation = document.getElementById("primary-navigation")
 
 
 //The hamburger menu function
- let hamburgerMenu = document.getElementById("hamburger-menu");
- console.log(hamburgerMenu)
+let hamburgerMenu = document.getElementById("hamburger-menu");
+
 hamburgerMenu.addEventListener("click", function(){
     hamburgerMenu.classList.toggle("highlight");
     primaryNavigation.classList.toggle("show");
     
 
     let primaryNavigationTabs = Array.from(primaryNavigation.children);
+
     primaryNavigationTabs.map((tab,index) => {
         let delay = index / 20;
         if(primaryNavigation.classList.contains("show")){
@@ -26,17 +26,6 @@ hamburgerMenu.addEventListener("click", function(){
     })
     
 })
-
-// let languageOption = document.getElementById("language-options");
-
-// languageOption.addEventListener("change", (e) => {
-//     localStorage.setItem("languagePreference", e.target.value)
-
-// })
-
-
-//This line corrects the overflow of the primary navigation when in Somali
-
 
 let homeBtn = document.getElementById("home-btn");
 let servicesBtn = document.getElementById("services-btn");
@@ -54,118 +43,12 @@ let faqsBtn = document.getElementById("faqBtn");
  let equalityDiversityPolicy = document.getElementById("equality-diversity-policy");
 
 
-// let arrayOfGeneralBtns = [homeBtn,servicesBtn,resourcesBtn,eventsBtn,aboutUsBtn,yourRightsAndTheLawBtn,contactUsBtn, faqsBtn, supportUs,healthAndSafety,dataProtectionPolicy, safeguardingPolicy,WhistleblowingPolicy,equalityDiversityPolicy];
 
-// let arrayOfGeneralBtnsContent = [["Home","Ile", "Hogar", "Guriga", "الصفحة الرئيسية", "Accueil",  "Casa"],["Services","Awọn iṣẹ", "Servicios", "Adeegyada", "خدمات", "Prestations de service","Serviços"],["Resources", "Oro", "Recursos", "Khayraadka","موارد","Ressources", "Recursos"],["Events", "Awọn iṣẹlẹ", "Eventos", "Dhacdooyinka", "الأحداث", "Événements","Eventos"],["About Us", "Nipa re", "Sobre nosotras","Nagu saabsan", "معلومات عنا", "À propos de nous", "Sobre nós"],["Your Rights and the Law", "Awọn ẹtọ rẹ ati Ofin", "Tus derechos y la ley", "Xuquuqdaada iyo Sharciga", "حقوقك والقانون", "Vos droits et la loi",  "Seus direitos e a lei"],["Contact Us", "Pe wa", "Contacta con nosotras", "Nala soo xiriir", "اتصل بنا", "Nous contacter", "Entre em contato conosco"],["FAQ","wọpọ ibeere", "preguntas comunes", "su'aalaha caadiga ah","الأسئلة الشائعة","questions courantes", "Perguntas frequentes"],["Support Us", "Ṣe atilẹyin fun Wa", "Apoyanos", "Nagu hiili", "ادعمنا", "Soutenez-nous", "Apoie-nos"],["Health and Safety","Ilera ati Aabo","Salud y seguridad","Caafimaadka iyo Badbaadada","الصحة و السلامة","Santé et sécurité","Saúde e segurança"], ["Data Protection Policy", "Data Idaabobo Afihan","Política de protección de datos","Siyaasadda Ilaalinta Xogta","سياسة حماية البيانات","Politique de protection des données", "Política de Proteção de Dados"], ["Safeguarding Policy","Ilana Idaabobo","Política de salvaguardia","Siyaasadda Ilaalinta", "سياسة الحماية", "Politique de sauvegarde", "Política de Salvaguarda"],["Whistleblowing Policy", "Whistleblowing Afihan", "Política de denuncia de irregularidades", "Siyaasadda sirta", "سياسة الصفير", "Politique de dénonciation","Política de Assovio"], ["equaltiy and diversity policy","Equality ati Oniruuru Afihan","Política de igualdad y diversidad", "Siyaasadda Sinnaanta iyo Kala-duwanaanta", "سياسة المساواة والتنوع", "Politique d'égalité et de diversité", "Política de Igualdade e Diversidade"]]
-
-// //Other parts of Footer
-// let contactUsTitle = document.getElementById("contact-us-title");
-// let policiesTitle = document.getElementById("policies-title");
-// let companyDetailsTitle = document.getElementById("company-details-title");
-// let contactUsContent = document.getElementById("contact-us-details-content");
-// let companyDetailsContent = document.getElementById("company-details-content");
-
-// let otherPartsOfFooter = [contactUsTitle,policiesTitle,companyDetailsTitle,contactUsContent,companyDetailsContent];
-
-// let otherPartsOfFooterInnerHTML = [["Contact Us","Pe wa","Contacta con nosotras","Nala soo xiriir","اتصل بنا","Nous contacter","Entre em contato conosco"], ["Policies", "Awọn ilana","Políticas","Siyaasadaha","سياسات","Stratégies","Políticas"],["Company Details","Awọn alaye Ile-iṣẹ","Detalles de la compañía","Faahfaahinta Shirkadda","تفاصيل الشركة","Détails de l'entreprise","Detalhes da Companhia"],["Just Education Matters CIC,<br>Kemp House,<br>152-160 City Road, <br>London EC1V 2NX<br>&nbsp;<br>Telephone: 07936 449 834<br>&nbsp;<br>Email: info@justeducationmatters.org<br>Web: www.justeducationmatters.org","Just Education Matters CIC,<br>Kemp House,<br>152-160 City Road, <br>London EC1V 2NX<br>&nbsp;<br>Tẹlifoonu: 07936 449 834<br>&nbsp;<br>Imeeli: info@justeducationmatters.org<br>ayelujara: www.justeducationmatters.org","Just Education Matters CIC,<br>Kemp House,<br>152-160 City Road, <br>London EC1V 2NX<br>&nbsp;<br>teléfono: 07936 449 834<br>&nbsp;<br>Email: info@justeducationmatters.org<br>Web: www.justeducationmatters.org","Just Education Matters CIC,<br>Kemp House,<br>152-160 City Road, <br>London EC1V 2NX<br>&nbsp;<br>telefoonka: 07936 449 834<br>&nbsp;<br>iimaylka: info@justeducationmatters.org<br>webka: www.justeducationmatters.org","Just Education Matters CIC,<br>Kemp House,<br>152-160 City Road, <br>London EC1V 2NX<br>&nbsp;<br>هاتف: 07936 449 834<br>&nbsp;<br>info@justeducationmatters.org: بريد الالكتروني<br>www.justeducationmatters.org:الويب","Just Education Matters CIC,<br>Kemp House,<br>152-160 City Road, <br>London EC1V 2NX<br>&nbsp;<br>Téléphone: 07936 449 834<br>&nbsp;<br>Email: info@justeducationmatters.org<br>Web: www.justeducationmatters.org","Just Education Matters CIC,<br>Kemp House,<br>152-160 City Road, <br>London EC1V 2NX<br>&nbsp;<br>Telefone: 07936 449 834<br>&nbsp;<br>Email: info@justeducationmatters.org<br>Web: www.justeducationmatters.org"],["Company name:<br>Just Education Matters CIC<br>&nbsp;<br>Registered address:<br>152-160, City Road, London,<br>United Kingdom, EC1V 2NX<br>&nbsp;<br>Company number: 12187684","Orukọ Ile-iṣẹ:<br>Just Education Matters CIC<br>&nbsp;<br>Adirẹsi ti o forukọsilẹ:<br>152-160, City Road, London,<br>United Kingdom, EC1V 2NX<br>&nbsp;<br>Nọmba Ile-iṣẹ: 12187684","Nombre de empresa:<br>Just Education Matters CIC<br>&nbsp;<br>Dirección registrada:<br>152-160, City Road, London,<br>United Kingdom, EC1V 2NX<br>&nbsp;<br>Numero de compañia: 12187684","Magaca shirkadda:<br>Just Education Matters CIC<br>&nbsp;<br>Cinwaanka Diiwaangashan:<br>152-160, City Road, London,<br>United Kingdom, EC1V 2NX<br>&nbsp;<br>Lambarka shirkadda: 12187684","اسم الشركة:<br>Just Education Matters CIC<br>&nbsp;<br>عنوان مسجل:<br>152-160, City Road, London,<br>United Kingdom, EC1V 2NX<br>&nbsp;<br>رقم الشركةr: 12187684","Nom de la compagnie:<br>Just Education Matters CIC<br>&nbsp;<br>Adresse enregistrée:<br>152-160, City Road, London,<br>United Kingdom, EC1V 2NX<br>&nbsp;<br>Numéro d'entreprise: 12187684","Nome da empresa:<br>Just Education Matters CIC<br>&nbsp;<br>Endereço registrado:<br>152-160, City Road, London,<br>United Kingdom, EC1V 2NX<br>&nbsp;<br>número da empresa: 12187684"]];
-                
-// window.onload = () => {
-//     arrayOfGeneralBtns.map((btn,index) => {
-//      if(localStorage.getItem("languagePreference") === "Yoruba"){
-//          console.log("true")
-//            btn.innerHTML = arrayOfGeneralBtnsContent[index][1];
-
-//         } else if(localStorage.getItem("languagePreference") === "Spanish"){
-//             btn.innerHTML = arrayOfGeneralBtnsContent[index][2];
-//         } else if(localStorage.getItem("languagePreference") === "Somali"){
-//             btn.innerHTML = arrayOfGeneralBtnsContent[index][3];
-//         } else if(localStorage.getItem("languagePreference") === "Arabic"){
-//             btn.innerHTML = arrayOfGeneralBtnsContent[index][4];
-//         }else if(event.target.value === "French"){
-//             btn.innerHTML = arrayOfGeneralBtnsContent[index][5];
-//         } else if(localStorage.getItem("languagePreference") === "Portuguese"){
-//             btn.innerHTML = arrayOfGeneralBtnsContent[index][6];
-//         } else {
-//             btn.innerHTML = arrayOfGeneralBtnsContent[index][0];
-//         }
-//     })
-//     otherPartsOfFooter.map((part,index) => {
-//      if(localStorage.getItem("languagePreference") === "Yoruba"){
-//          console.log("true")
-//            part.innerHTML = otherPartsOfFooterInnerHTML[index][1];
-
-//         } else if(localStorage.getItem("languagePreference") === "Spanish"){
-//             part.innerHTML = otherPartsOfFooterInnerHTML[index][2];
-//         } else if(localStorage.getItem("languagePreference") === "Somali"){
-//             part.innerHTML = otherPartsOfFooterInnerHTML[index][3];
-//         } else if(localStorage.getItem("languagePreference") === "Arabic"){
-//             part.innerHTML = otherPartsOfFooterInnerHTML[index][4];
-//         }else if(event.target.value === "French"){
-//             part.innerHTML = otherPartsOfFooterInnerHTML[index][5];
-//         } else if(localStorage.getItem("languagePreference") === "Portuguese"){
-//             part.innerHTML = otherPartsOfFooterInnerHTML[index][6];
-//         } else {
-//             part.innerHTML = otherPartsOfFooterInnerHTML[index][0];
-//         }
-//     })
-// }
-
-// setInterval(()=> {
-// arrayOfGeneralBtns.map((btn,index) => {
-//         languageOption.addEventListener("change", (event) => {
-//         localStorage.setItem("languagePreference", event.target.value)
-//        if(localStorage.getItem("languagePreference") === "Yoruba"){
-//            btn.innerHTML = arrayOfGeneralBtnsContent[index][1];
-
-//         } else if(localStorage.getItem("languagePreference") === "Spanish"){
-//             btn.innerHTML = arrayOfGeneralBtnsContent[index][2];
-//         } else if(localStorage.getItem("languagePreference") === "Somali"){
-//             btn.innerHTML = arrayOfGeneralBtnsContent[index][3];
-//         } else if(localStorage.getItem("languagePreference") === "Arabic"){
-//             btn.innerHTML = arrayOfGeneralBtnsContent[index][4];
-//         }else if(event.target.value === "French"){
-//             btn.innerHTML = arrayOfGeneralBtnsContent[index][5];
-//         } else if(localStorage.getItem("languagePreference") === "Portuguese"){
-//             btn.innerHTML = arrayOfGeneralBtnsContent[index][6];
-//         } else {
-//             btn.innerHTML = arrayOfGeneralBtnsContent[index][0];
-//         }
-        
-//     })
-// })
-// otherPartsOfFooter.map((part,index) => {
-//     languageOption.addEventListener("change", (event) => {
-//         localStorage.setItem("languagePreference", event.target.value)
-//         if(localStorage.getItem("languagePreference") === "Yoruba"){
-//          console.log("true")
-//            part.innerHTML = otherPartsOfFooterInnerHTML[index][1];
-
-//         } else if(localStorage.getItem("languagePreference") === "Spanish"){
-//             part.innerHTML = otherPartsOfFooterInnerHTML[index][2];
-//         } else if(localStorage.getItem("languagePreference") === "Somali"){
-//             part.innerHTML = otherPartsOfFooterInnerHTML[index][3];
-//         } else if(localStorage.getItem("languagePreference") === "Arabic"){
-//             part.innerHTML = otherPartsOfFooterInnerHTML[index][4];
-//         }else if(event.target.value === "French"){
-//             part.innerHTML = otherPartsOfFooterInnerHTML[index][5];
-//         } else if(localStorage.getItem("languagePreference") === "Portuguese"){
-//             part.innerHTML = otherPartsOfFooterInnerHTML[index][6];
-//         } else {
-//             part.innerHTML = otherPartsOfFooterInnerHTML[index][0];
-//         }
-//     })
-// })
-// },1000)
-
-// function googleTranslateElementInit() {
-//   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-// }
-
-//The modal element
+//The modal
 let modal = document.getElementById("modal");
 
 
-//Event modal
+//Events modal
 let events = Array.from(document.querySelectorAll(".event"));
 
 events.map(event => {
@@ -193,89 +76,88 @@ events.map(event => {
             modalContent.style.padding = "2rem";
 
             let contactForm = document.createElement("form");
-        contactForm.classList.add("content-contact-Us");
-        contactForm.setAttribute("action", "https://formsubmit.co/amandanwadukwe@gmail.com");
-        contactForm.setAttribute("method", "POST");
+            contactForm.classList.add("content-contact-Us");
+            contactForm.setAttribute("action", "https://formsubmit.co/amandanwadukwe@gmail.com");
+            contactForm.setAttribute("method", "POST");
 
-        let nameLabel = document.createElement("label");
-        nameLabel.innerText = "Name";
-        nameLabel.setAttribute("for", "nameInput");
-        contactForm.append(nameLabel);
+            let nameLabel = document.createElement("label");
+            nameLabel.innerText = "Name";
+            nameLabel.setAttribute("for", "nameInput");
+            contactForm.append(nameLabel);
 
-        let nameInput = document.createElement("input");
-        nameInput.setAttribute("required", "");
-        nameInput.setAttribute("type", "text");
-        nameInput.setAttribute("id", "nameInput");
-        nameInput.setAttribute("name", "nameInput")
-        contactForm.append(nameInput)
+            let nameInput = document.createElement("input");
+            nameInput.setAttribute("required", "");
+            nameInput.setAttribute("type", "text");
+            nameInput.setAttribute("id", "nameInput");
+            nameInput.setAttribute("name", "nameInput")
+            contactForm.append(nameInput)
 
-        let breakTag = document.createElement("br");
-        contactForm.append(breakTag)
+            let breakTag = document.createElement("br");
+            contactForm.append(breakTag)
 
-        let emailLabel = document.createElement("label");
-        emailLabel.innerText = "Email";
-        emailLabel.setAttribute("for", "emailInput");
-        contactForm.append(emailLabel)
+            let emailLabel = document.createElement("label");
+            emailLabel.innerText = "Email";
+            emailLabel.setAttribute("for", "emailInput");
+            contactForm.append(emailLabel)
 
-        let emailInput = document.createElement("input");
-        emailInput.setAttribute("required", "");
-        emailInput.setAttribute("type", "email");
-        emailInput.setAttribute("id", "emailInput");
-        emailInput.setAttribute("name", "emailInput");
-        contactForm.append(emailInput)
+            let emailInput = document.createElement("input");
+            emailInput.setAttribute("required", "");
+            emailInput.setAttribute("type", "email");
+            emailInput.setAttribute("id", "emailInput");
+            emailInput.setAttribute("name", "emailInput");
+            contactForm.append(emailInput)
 
-        let breakTag2 = document.createElement("br");
-        contactForm.append(breakTag2)
+            let breakTag2 = document.createElement("br");
+            contactForm.append(breakTag2)
 
-        let subjectLabel = document.createElement("label");
-        subjectLabel.innerText = "Subject";
-        subjectLabel.setAttribute("for", "subjectInput")
-        contactForm.append(subjectLabel)
+            let subjectLabel = document.createElement("label");
+            subjectLabel.innerText = "Subject";
+            subjectLabel.setAttribute("for", "subjectInput")
+            contactForm.append(subjectLabel)
 
-        let subjectInput = document.createElement("input");
-        subjectInput.setAttribute("required", "");
-        subjectInput.value = "Event Registration";
-        subjectInput.setAttribute("id", "subjectInput");
-        subjectInput.setAttribute("type", "text");
-        subjectInput.setAttribute("name", "subjectInput")
-        contactForm.append(subjectInput);
+            let subjectInput = document.createElement("input");
+            subjectInput.setAttribute("required", "");
+            subjectInput.value = "Event Registration";
+            subjectInput.setAttribute("id", "subjectInput");
+            subjectInput.setAttribute("type", "text");
+            subjectInput.setAttribute("name", "subjectInput")
+            contactForm.append(subjectInput);
 
-        let breakTag3 = document.createElement("br");
-        contactForm.append(breakTag3)
+            let breakTag3 = document.createElement("br");
+            contactForm.append(breakTag3)
 
-        let messageLabel = document.createElement("label");
-        messageLabel.setAttribute("for", "messageTextArea")
-        messageLabel.innerText = "Message"
-        contactForm.append(messageLabel)
+            let messageLabel = document.createElement("label");
+            messageLabel.setAttribute("for", "messageTextArea")
+            messageLabel.innerText = "Message"
+            contactForm.append(messageLabel)
 
-        let messageTextArea = document.createElement("textarea");
-        messageTextArea.setAttribute("required", "");
-        messageTextArea.setAttribute("id", "messageTextArea");
-        messageTextArea.setAttribute("name", "messageTextArea")
-        contactForm.append(messageTextArea)
+            let messageTextArea = document.createElement("textarea");
+            messageTextArea.setAttribute("required", "");
+            messageTextArea.setAttribute("id", "messageTextArea");
+            messageTextArea.setAttribute("name", "messageTextArea")
+            contactForm.append(messageTextArea)
 
-        let breakTag4 = document.createElement("br");
-        contactForm.append(breakTag4)
+            let breakTag4 = document.createElement("br");
+            contactForm.append(breakTag4)
 
 
-        let sendMessageBtn = document.createElement("button");
-        sendMessageBtn.setAttribute("type", "submit");
-        sendMessageBtn.innerHTML = "Register"
-        sendMessageBtn.classList.add("btn");
-        contactForm.append(sendMessageBtn)
+            let sendMessageBtn = document.createElement("button");
+            sendMessageBtn.setAttribute("type", "submit");
+            sendMessageBtn.innerHTML = "Register"
+            sendMessageBtn.classList.add("btn");
+            contactForm.append(sendMessageBtn)
 
-        let statusMessage = document.createElement("span");
-        statusMessage.classList.add("output_message");
-        contactForm.append(statusMessage);
-        modalContent.append(contactForm)
-           
+            let statusMessage = document.createElement("span");
+            statusMessage.classList.add("output_message");
+            contactForm.append(statusMessage);
+            modalContent.append(contactForm)
+            
 
-        
-        modal.classList.add("show")
+            
+            modal.classList.add("show")
         }
     })
 })
-console.log(events)
 
 
 function createContactUsModal(){

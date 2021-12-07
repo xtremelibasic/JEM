@@ -26,6 +26,7 @@ let EHCAArticle = document.getElementById("article5-view-button");
 let EHCPArticle = document.getElementById("article6-view-button");
 console.log(avoidingExclusionArticle)
 
+//This function creates the "contact us" modal
 function createContactUsModal(){
     articleModal.innerHTML = "";
     if(modal.offsetHeight < 65){
@@ -125,6 +126,8 @@ function createContactUsModal(){
         modal.classList.add("show")
     }
 }
+
+//This function creates the SEN article modal
 function createSENArticle(){
         articleModal.innerHTML = "";
     if(articleModal.offsetHeight < 65){
@@ -152,6 +155,7 @@ function createSENArticle(){
     }
 }
 
+//This function creates the EHCA article modal
 function createEHCAArticle(){
         articleModal.innerHTML = "";
     if(articleModal.offsetHeight < 65){
@@ -179,6 +183,7 @@ function createEHCAArticle(){
     }
 }
 
+//This function creates the EHCP article modal
 function createEHCPArticle(){
     articleModal.innerHTML = "";
      if(articleModal.offsetHeight < 65){
@@ -205,6 +210,8 @@ function createEHCPArticle(){
         articleModalContent.innerHTML = "<h2>What is it?</h2><p>The EHCP is to make special educational provision to meet a child’s SEN over and above what a school is capable of providing through SEN support.</p><h2>What information is in the EHC Plan</h2><p>The EHC Plan must include certain information by law and is sectioned into 11 parts,<ul class='noListType-list'><li>sections A - K</li><li>Section A: sets your’s and your child’s views, interests and aspirations</li><li>Section B: sets out your child’s SEN</li><li>Section C: sets out your child’s health care needs which relate to their SEN</li><li>Section D: sets out your child’s social care needs related to their SEN or disability</li><li>Section E: sets out the  outcomes for your child and identifies the arrangements for setting targets by the nursery or school</li><li>Section F: sets out the special educational provision necessary to meet your child’s needs</li><li>Section G: sets out health provision required by your child’s learning difficulties or disability related to their SEN</li><li>Section H1 & H2: sets out the social care provision which must be made your child if they have a disability and or required by their learning difficulties to meet their SEN</li><li>Section J: sets out details of how any personal budget will support the particular outcomes (if you opt for this)</li><li>Section K: lists the advice and information collected for the EHC needs.</li></ul></p><h2>Why is it important to have an EHC Plan</h2><p>The EHC Plan provides more protection for your child because:<ul><li>it gives you a route to challenge the council if it fails to ensure the provision in the EHC Plan is put place and delivered</li><li>If you are unhappy with what the council says about your child’s needs or the provision needed to meet those needs you can challenge the council’s decision in the SEND tribunal</li><li>You get to choose the school you want your child to go to and the council has to name your choice of school in the EHC Plan unless they consider it’s not suitable for the child or it would be unreasonable use of resources or would have an adverse impact on the education of the child or those they will go to school with. You could even choose an independent school and the council would still have to consider your choice. The council can only refuse your choice of an independent school if to agree to it would be incompatible with the efficient education or training of others or the avoidance of unreasonable public expenditure.</li></ul>If you would like support in asking your council for an EHC Plan please <span onclick='createContactUsModal()' class='article-link'>contact us</span></p>"
     }
 }
+
+//Create the Avoiding Exclusion article modal on click of this article's view button
 avoidingExclusionArticle.addEventListener("click", function(){
     if(articleModal.offsetHeight < 10){
         articleModal.innerHTML = "";   
@@ -235,6 +242,7 @@ avoidingExclusionArticle.addEventListener("click", function(){
 
 })
 
+//Create the Educating Your Child article modal on click of this article's view button
 educatingYourChildArticle.addEventListener("click", function(){
     if(articleModal.offsetHeight < 10){
         articleModal.innerHTML = "";   
@@ -261,6 +269,8 @@ educatingYourChildArticle.addEventListener("click", function(){
     }
 })
 
+
+//Create the Options for Educating Your Child modal on click of the  article view button
 optionsForEducatingYourChild.addEventListener("click", function(){
     if(articleModal.offsetHeight < 10){
         articleModal.innerHTML = "";   
@@ -289,7 +299,7 @@ optionsForEducatingYourChild.addEventListener("click", function(){
 
 SENArticle.addEventListener("click", function(){
     if(articleModal.offsetHeight < 10){
-        
+        createSENArticle();
     }
 })
 
